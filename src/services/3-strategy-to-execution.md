@@ -16,23 +16,20 @@ related: strategy-that-survives-engineering, the-roadmap-nobody-shipped, why-goo
 - leadership sees activity, but can't connect it to the goals it set
 - a big bet is coming, like a new market, a rebuild or a new product line, and the plan hasn't been tested against the platform
 
-## What we do
+## How it runs
 
 We work with leadership to turn goals into a handful of bets for the quarter, each with a target metric, a first solution and one owner. We bring engineering in while the direction is still open, so expensive assumptions show up in a meeting instead of in month four.
 
-Then we build the roadmap from capacity, not from wishes: what's left after maintenance and unplanned work, ranked strictly, with everything below the line explicitly not happening. Delivery dates inside the quarter stay flexible. Work ships when it's ready.
+Then we build the roadmap from the capacity you actually have: what's left after maintenance and unplanned work, ranked strictly, with everything below the line explicitly not happening. Delivery dates inside the quarter stay flexible. Work ships when it's ready.
+
+It usually takes four to six focused weeks to set direction and the roadmap, then a monthly review after that. It can also run as part of a fractional product leadership engagement.
 
 ## What you get
 
 - a short list of bets tied to business outcomes, each with a metric and an owner
 - a feasibility check on the major bets with your engineering leads
 - a ranked roadmap for the next quarter and a direction for the one after
-- a simple rule for how new priorities get in, and what they replace
 - a monthly review where results, not status, steer the next decisions
-
-## Format
-
-Usually a focused four to six weeks to set direction and the roadmap, followed by monthly reviews. It can also run as part of a fractional product leadership engagement.
 
 ## Questions
 

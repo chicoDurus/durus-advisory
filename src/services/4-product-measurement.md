@@ -24,11 +24,7 @@ From there we set up a small, trusted set of metrics, a dashboard people actuall
 
 ## What you get
 
-- a short list of business metrics everyone agrees on, with written definitions
-- tracking checked and fixed for the key customer flows
-- funnels and reports that reconcile with finance, or a documented reason why they differ
-- a lightweight post-release review habit for the product team
-- a clear owner for measurement going forward
+A short list of business metrics everyone agrees on, each with a written definition. Tracking that's been checked and fixed on the key customer flows. Reports that match finance, or a documented reason why they don't. A simple habit of reviewing each release a few weeks after it ships, and someone who clearly owns measurement from then on.
 
 ## Format
 
@@ -39,10 +35,6 @@ Usually four to eight weeks, depending on the state of the existing tracking. We
 ### Which tools do you work with?
 
 The ones you already use. Common setups include GA4, Google Tag Manager, product analytics tools, data warehouses and BI dashboards. We don't push a tool change unless the current one genuinely can't do the job.
-
-### Do you build the dashboards yourselves?
-
-Often, yes, for the core set. The bigger value is in the definitions and the habit of checking results, which outlast any dashboard.
 
 ### Is this just an analytics project?
 

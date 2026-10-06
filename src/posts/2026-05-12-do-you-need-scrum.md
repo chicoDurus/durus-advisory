@@ -6,7 +6,7 @@ cover: question
 excerpt: Scrum solves a specific problem. Many companies adopt the whole package without having that problem, and pay for it in meetings. What to keep, what to cut, and when Kanban is the better call.
 ---
 
-Most companies that run Scrum adopted it because it was the default. A new head of engineering brought it in, or an investor asked whether the teams were "agile", or everyone else seemed to be doing it.
+A lot of companies run Scrum simply because it was the default. A new head of engineering brought it in, or an investor asked whether the teams were "agile", or everyone else seemed to be doing it.
 
 That's a weak reason to commit a whole organisation to a set of roles, events and rituals. Scrum is a good answer to one specific problem. If you don't have that problem, you get the overhead and very little in return.
 
@@ -36,7 +36,7 @@ Our own default is light. We keep the skeleton: two-week sprints and a short dai
 
 Most of the rest is negotiable. Long refinement sessions with the whole team, ceremonial reviews nobody outside the team attends, retrospectives that produce the same three complaints every time. If a meeting doesn't produce a decision or unblock work, we cut it and give the time back to the people building the product.
 
-That surprises some leaders, who expect more process from an advisory firm, not less. In practice, a team with fewer meetings and clear priorities ships more than a team running every ceremony by the book.
+That surprises some leaders, who expect an advisory firm to add process. In practice, a team with fewer meetings and clear priorities ships more than a team running every ceremony by the book.
 
 ## Questions to ask before committing
 
@@ -49,8 +49,4 @@ If you're deciding whether to introduce Scrum, or whether to keep it, these are 
 
 If the honest answers are mostly yes and the problem is focus or visibility, Scrum is a good fit. If a big share of work is unplanned, or ownership of priorities is unclear, start with a board, a work-in-progress limit and one person who decides. You can add structure later, once you can see where it's missing.
 
-## What actually matters
-
-The framework is a means to an end. Your customers don't care whether the team uses story points, and neither does your P&L. What matters is whether the right things ship, and whether they move the numbers the business cares about.
-
-Pick the lightest process that gets you there, and be ready to change it when the business changes.
+Your customers don't care whether the team uses story points, and neither does your P&L. Pick the lightest process that gets the right things shipped, and change it when the business changes.

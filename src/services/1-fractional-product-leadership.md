@@ -10,15 +10,9 @@ related: when-to-bring-in-fractional-product-leadership, why-good-products-die-b
 ---
 ## When it makes sense
 
-Product decisions have outgrown the people making them. Usually it looks like one of these:
+Usually when product decisions have outgrown the people making them. The roadmap has turned into a list of requests from whoever asked last. The founder or CTO is acting as product owner and losing most of their week to it. Engineering ships steadily and the numbers don't move. Or a product lead has left and the work is now spread across people who already have full jobs.
 
-- the roadmap is a list of requests from whoever asked last
-- the founder or CTO is acting as product owner, and it's eating their week
-- engineering ships steadily, but revenue, retention or conversion doesn't move
-- several brands or markets on one platform have started drifting apart
-- a product lead has left and the work is spread across people with full jobs already
-
-A permanent head of product is a slow and expensive hire, and a costly one to get wrong before you know exactly what the role needs. Fractional leadership covers the gap properly, and often shows you what the permanent role should be.
+You could hire a permanent head of product, and eventually you probably should. But it's a slow hire, an expensive one, and easy to get wrong before you know what the role really needs. A fractional lead covers the gap properly in the meantime, and by the end you'll know what to hire for.
 
 ## What we do
 
@@ -28,11 +22,7 @@ Your team keeps running its own day-to-day work. We don't micromanage. We expect
 
 ## What you get
 
-- a roadmap the team can deliver, ranked against real capacity
-- one clear process for how new requests get decided
-- measurement in place for the work that matters
-- a weekly written update and a monthly review against agreed goals
-- a product function that keeps running after we step back
+A roadmap the team can actually deliver, ranked against real capacity, and one agreed way of deciding new requests. Measurement on the work that matters. A short written update every week and a review against the agreed goals every month. And when we step back, a product function that keeps running without us.
 
 ## Format
 

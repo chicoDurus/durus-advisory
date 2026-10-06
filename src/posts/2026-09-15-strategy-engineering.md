@@ -6,7 +6,7 @@ cover: fracture
 excerpt: A strategy that falls apart the moment engineers read it was a wish list. How to build strategy that holds up under technical scrutiny, and why engineering belongs in the room before the direction is fixed.
 ---
 
-Most product leaders have seen this happen. Leadership presents a new strategy. It's clear, ambitious and well argued. Then it reaches engineering, and within a week it starts to come apart.
+You have probably seen this happen. Leadership presents a new strategy. It's clear, ambitious and well argued. Then it reaches engineering, and within a week it starts to come apart.
 
 The personalisation initiative needs data the platform doesn't collect. Entering three new markets in one quarter assumes a multi-currency setup that doesn't exist. A single customer account across all brands would mean rebuilding an authentication layer that six other systems depend on.
 
@@ -34,7 +34,7 @@ It's honest about cost. If the platform team spends the first half of the year o
 
 ## How to build it
 
-Bring a senior engineer or architect into the strategy conversation before the direction is fixed. Their job isn't to approve the plan. It's to flag expensive assumptions while they're still cheap to change. Engineers can build almost anything given enough time, so "can we do this?" is the wrong question. "What would this take, and what's the simplest version that gets most of the value?" is the right one.
+Bring a senior engineer or architect into the strategy conversation before the direction is fixed. They're there to flag the expensive assumptions while those are still cheap to change. Engineers can build almost anything given enough time, so "can we do this?" is the wrong question. "What would this take, and what's the simplest version that gets most of the value?" is the right one.
 
 Run a short feasibility check on every major bet. A week or two is usually enough to know whether you're planning a three-week project or a nine-month one, what it depends on, and which technical assumption is riskiest.
 

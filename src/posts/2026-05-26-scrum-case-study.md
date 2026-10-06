@@ -30,7 +30,7 @@ Then a simple board went up, with every item currently in progress on it. Seeing
 
 ## Step two: one owner for priorities
 
-This was the hard part, and it was a leadership decision, not a process change.
+This was the hard part, and only the CEO could make the call.
 
 The proposal to the CEO was simple. One product owner orders the backlog. Everyone else can request, argue and escalate in a weekly prioritisation session, but the order is decided in one place. Genuine emergencies, meaning production incidents and regulatory deadlines, get a fast lane.
 
@@ -66,8 +66,4 @@ Bring testing into the redesign earlier. Limiting work in progress exposed testi
 
 Agree what "done" means on day one. For the first few sprints it meant merged to some people, released to others, and verified in production to a few. A one-paragraph definition would have saved several awkward conversations.
 
-## The takeaway for leadership
-
-The team didn't need more process or more people. It needed one list, one person deciding the order, and a limit on how much it tried to do at once. The Scrum skeleton gave that a rhythm, but it only worked because the foundations were already in place.
-
-If your product organisation feels chaotic, resist rolling out a framework on day one. Fix visibility and ownership first.
+If your product organisation feels chaotic, resist rolling out a framework on day one. In this case the team never needed more people or more process. It needed one list and one person deciding the order, and the sprint rhythm only worked because that was already in place.

@@ -37,7 +37,7 @@ It also changes the conversation with leadership. Instead of "what's in the next
 
 ## What has to be true first
 
-Ad hoc releasing isn't a licence to ship whenever someone feels like it. It depends on a few things being in place.
+Releasing ad hoc still takes discipline. A few things need to be in place first.
 
 You need automated testing good enough that a release doesn't require a week of manual regression. You need a deployment process that's boring: one click or one merge, the same every time. You need a way to switch features off without a redeploy, so a problem in production is a toggle away from contained. And you need monitoring that tells you within minutes if something has gone wrong.
 
@@ -58,7 +58,3 @@ If you want predictability, ask for it in the right place. Not "when is the next
 - what's coming in the next few weeks, roughly?
 
 A team that can answer those clearly gives you more control than any release calendar, without the hidden cost of work waiting on a shelf or going out half-tested.
-
-## The short version
-
-Fixed release trains optimise for the feeling of order. Releasing when work is ready optimises for getting value to customers safely. Given the choice, we pick the second one, and put the effort into making releases small and boring enough that timing stops being a big decision.

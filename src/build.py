@@ -169,8 +169,8 @@ def footer():
 CTA = f"""  <section class="cta-band" id="contact">
     <div class="wrap cta-in reveal">
       <span class="eyebrow" style="display:block;margin-bottom:22px">Get in touch</span>
-      <h2>Got a product that's drifting, or a roadmap stalled between strategy and delivery?</h2>
-      <p>Send us a note. We'll tell you straight whether we can help.</p>
+      <h2>Is a product drifting, or a roadmap stuck between strategy and delivery?</h2>
+      <p>Send us a note and we'll tell you whether we can help.</p>
       <div class="row">
         <a class="btn" href="{CALENDLY}" target="_blank" rel="noopener">Book a call <span class="arw" aria-hidden="true">↗</span></a>
         <a class="btn ghost email" href="mailto:{EMAIL}">{EMAIL}</a>
@@ -358,7 +358,7 @@ def service_page(s, services, posts_by_slug):
         cards = "\n".join(link_card(p["date_h"], p["title"], "", p["url"]) for p in reading)
         reading_html = f"""  <section class="tight">
     <div class="wrap">
-      <div class="sec-head"><h2>Further reading.</h2></div>
+      <div class="sec-head"><h2>Further reading</h2></div>
       <div class="link-grid">
 {cards}
       </div>
@@ -369,7 +369,6 @@ def service_page(s, services, posts_by_slug):
     <a class="back" href="/services"><span aria-hidden="true">←</span> All services</a>
     <span class="eyebrow">Services</span>
     <h1>{esc(s['title'])}</h1>
-    <p class="page-slogan">{esc(s['h1'])}</p>
     <p class="page-lede">{esc(s['lede'])}</p>
     <div class="page-cta">
       <a class="btn" href="{CALENDLY}" target="_blank" rel="noopener">Book a call <span class="arw" aria-hidden="true">↗</span></a>
@@ -389,7 +388,7 @@ def service_page(s, services, posts_by_slug):
 
   <section class="tight">
     <div class="wrap">
-      <div class="sec-head"><h2>Other services.</h2></div>
+      <div class="sec-head"><h2>Other services</h2></div>
       <div class="link-grid">
 {others}
       </div>

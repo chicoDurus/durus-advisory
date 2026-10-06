@@ -32,9 +32,7 @@ Keep a parity map. A simple, current view of which features and component versio
 
 Separate brand from platform. Look and feel, content, promotions and local legal requirements belong to the brand. Core flows like sign-up, payments, account management and support belong to the platform, and should behave the same everywhere unless there's a documented reason.
 
-Make exceptions expensive to create and cheap to remove. Every brand-specific variation should have an owner and a review date. When the reason for it goes away, so should the variation.
-
-Upgrade everyone, every time. When a shared component changes, it rolls out to all brands within a defined window. "This brand will catch up later" is how drift starts.
+Then stop the drift from creeping back. Every brand-specific variation gets an owner and a review date, so it disappears when the reason for it does. And when a shared component changes, it goes to every brand within a set window. "This brand will catch up later" is how most drift starts.
 
 Measure brands against each other. Comparing conversion, speed and error rates across brands on the same flow is one of the fastest ways to find product problems, because the brands act as a natural control group.
 

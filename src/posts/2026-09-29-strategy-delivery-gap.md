@@ -38,7 +38,7 @@ Translate strategy into a small number of bets. Don't hand a strategy document t
 
 Test feasibility before committing. Bring engineering in while the direction is still flexible, so expensive assumptions are found in a meeting, not in month four.
 
-Report results upward every month. Not status, evidence: what moved, what didn't, what was learned. Leadership then adjusts direction based on what's actually happening.
+Report results upward every month. The report covers what moved, what didn't and what was learned, rather than status. Leadership then adjusts direction based on what's actually happening.
 
 Trust the team with the how. Once the goal and the measure are clear, let the people closest to the work decide how to get there. Expect clear reporting, and step in when something is actually off track. Micromanaging the middle of the line is one of the fastest ways to widen the gap.
 
@@ -46,8 +46,6 @@ Give someone ownership of the whole line. This is the role most often missing: o
 
 ## When it works
 
-Roadmap conversations get shorter, because everyone works from the same short list of goals. Engineers raise concerns earlier, because they understand what matters. Leadership trusts the team more, because it sees results, not just activity.
+The first thing you notice is that roadmap meetings get shorter, because everyone is working from the same few goals. Good ideas also start surviving the trip from the strategy deck to the platform, or they get changed on purpose, based on evidence.
 
-And good ideas survive. They make it from the strategy deck to the platform intact, or they change deliberately based on evidence, instead of getting lost on the way.
-
-If your business has clear direction and a capable team, and results still aren't coming, look at the middle.
+If your business has clear direction and a capable team, and the results still aren't coming, look at the middle.

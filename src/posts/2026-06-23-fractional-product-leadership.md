@@ -6,7 +6,7 @@ cover: orgchart
 excerpt: A full-time head of product is a big hire to get wrong. For many companies, a few days a week of senior product judgment does the job better. The signs you need it, and what to expect from it.
 ---
 
-Most companies reach a point where product decisions outgrow the people making them. The founder can't be in every prioritisation call any more. Engineering is shipping, but nobody can say clearly why those features and not others. Different parts of the business pull the roadmap in different directions.
+At some point, product decisions outgrow the people making them. The founder can't be in every prioritisation call any more. Engineering is shipping, but nobody can say clearly why those features and not others. Different parts of the business pull the roadmap in different directions.
 
 The usual answer is to hire a head of product. That's a good answer, eventually. It's also a slow, expensive hire, and a costly one to get wrong at a stage when the company might not yet know exactly what it needs from the role.
 
@@ -32,7 +32,7 @@ You lost a product lead and need the work covered properly while you hire, rathe
 
 Fractional leadership is hands-on. It means owning the roadmap, running prioritisation, working directly with engineering and design, talking to the commercial side, and being accountable for whether the work moves the numbers.
 
-It isn't a strategy deck delivered at the end of six weeks. It isn't a consultant who interviews everyone and leaves a report. And it isn't a project manager chasing tickets.
+So if you're expecting a strategy deck after six weeks, or a report from someone who interviewed everyone and left, this is a different thing. It's closer to having a senior product lead on the team part-time. Chasing tickets stays with whoever does it today.
 
 A good fractional lead also doesn't micromanage. The team keeps running its own day-to-day work. What changes is that someone with senior judgment sets direction, makes the trade-offs, expects clear reporting, and steps in when something is actually going wrong.
 

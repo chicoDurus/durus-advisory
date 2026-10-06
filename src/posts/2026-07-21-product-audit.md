@@ -3,10 +3,10 @@ title: What a Product Audit Should Tell You
 slug: what-a-product-audit-should-tell-you
 date: 2026-07-21
 cover: documents
-excerpt: A useful product audit ends with a short, ranked list of what to fix and why, not a 60-page report. What to look at, what the output should be, and the signs that it's time for one.
+excerpt: A useful product audit ends with a short, ranked list of what to fix and why. What to look at, what the output should be, and the signs that it's time for one.
 ---
 
-Most leadership teams have a feeling that something in the product isn't working as well as it should. Conversion is softer than it used to be. Releases take longer. Customers complain about things the team says are fixed. Different brands or markets behave in ways nobody can quite explain.
+Leadership teams often sense that something in the product isn't working as well as it should. Conversion is softer than it used to be. Releases take longer. Customers complain about things the team says are fixed. Different brands or markets behave in ways nobody can quite explain.
 
 A product audit turns that feeling into a list of specific problems, ranked by what they cost the business. Done well, it's one of the highest-return pieces of work a product organisation can commission. Done badly, it's an expensive document nobody opens twice.
 
@@ -46,7 +46,7 @@ The team shouldn't be disrupted much. An audit needs access to the product, the 
 
 ## What to do with it
 
-The most common failure isn't a bad audit. It's a good audit that nobody acts on. The findings get presented, everyone agrees, and three months later the backlog looks exactly as it did before.
+The most common failure we see is a good audit that nobody acts on. The findings get presented, everyone agrees, and three months later the backlog looks exactly as it did before.
 
 Before commissioning an audit, decide who will own the follow-up and when the leadership team will review progress against it. Ideally, the first few fixes are already in delivery by the time the final findings are presented.
 

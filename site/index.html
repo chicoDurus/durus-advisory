@@ -93,6 +93,18 @@
 
   @media(max-width:720px){.nav-links a.lnk{display:none}}
 
+  /* ---- Mobile menu ---- */
+  .menu-btn{display:none;width:44px;height:44px;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:none;border:1px solid var(--line-2);cursor:pointer;padding:0}
+  .menu-btn span{display:block;width:18px;height:2px;background:var(--fg);transition:transform .25s ease}
+  .menu-btn[aria-expanded="true"] span:first-child{transform:translateY(4px) rotate(45deg)}
+  .menu-btn[aria-expanded="true"] span:last-child{transform:translateY(-4px) rotate(-45deg)}
+  .mobile-menu{position:absolute;left:0;right:0;top:100%;background:var(--ink);border-bottom:1px solid var(--line);padding:4px var(--pad) 16px}
+  .mobile-menu a{display:block;padding:15px 0;border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:15px;letter-spacing:.04em;color:var(--fg-2)}
+  .mobile-menu a:last-child{border-bottom:0}
+  .mobile-menu a:hover,.mobile-menu a[aria-current]{color:var(--fg)}
+  @media(max-width:720px){.menu-btn{display:inline-flex}.nav-links{gap:10px}}
+  @media(min-width:721px){.mobile-menu{display:none!important}}
+
   .hero{padding-top:clamp(64px,12vh,132px);padding-bottom:clamp(40px,7vh,72px)}
   .hero .eyebrow{display:block;margin-bottom:26px}
   h1.hero-h{font-size:clamp(38px,6.6vw,74px);font-weight:900;max-width:16ch}
@@ -224,7 +236,7 @@
   }
 
   /* ---- Intro ---- */
-  .intro{display:none;position:fixed;inset:0;z-index:100;background:var(--ink);align-items:center;justify-content:center;padding:24px;transition:background-color .7s ease}
+  .intro{display:none;position:fixed;inset:0;z-index:100;background:var(--ink);align-items:center;justify-content:center;padding:24px;transition:background-color .55s ease}
   .intro-on .intro{display:flex}
   .intro-on body{overflow:hidden}
   .intro-on #brandLogo{opacity:0}
@@ -288,7 +300,14 @@
       <a class="lnk" href="#about">About</a>
       <a class="lnk" href="#blog">Blog</a>
       <a class="btn" href="https://calendly.com/durusadvisory" target="_blank" rel="noopener">Book a call <span class="arw" aria-hidden="true">↗</span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu"><span></span><span></span></button>
     </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#approach">What we offer</a>
+    <a href="#method">How we work</a>
+    <a href="#about">About</a>
+    <a href="#blog">Blog</a>
   </div>
 </header>
 
@@ -656,6 +675,7 @@
 </footer>
 
 <script src="assets/logo.js"></script>
+<script src="assets/site.js"></script>
 <script>
   /* Logo: intro overlay that hands off into the header badge. */
   (function(){
@@ -679,14 +699,14 @@
       var to = brand.getBoundingClientRect();
       var s = to.width / from.width;
       intro.classList.add('leaving');
-      svg.style.transition = 'transform .9s cubic-bezier(.65,0,.25,1)';
+      svg.style.transition = 'transform .7s cubic-bezier(.65,0,.25,1)';
       svg.style.transform = 'translate(' + (to.left - from.left) + 'px,' + (to.top - from.top) + 'px) scale(' + s + ')';
       setTimeout(function(){
         root.classList.remove('intro-on');
         if(intro.parentNode) intro.parentNode.removeChild(intro);
         header.finish();
         markSeen();
-      }, 950);
+      }, 720);
     }
 
     function skip(){
@@ -709,7 +729,7 @@
     DurusLogo.fontsReady(1500).then(function(){
       if(done) return;
       logo.build();
-      logo.play({ onDone: function(){ setTimeout(handOff, 450); } });
+      logo.play({ speed: 1.5, onDone: function(){ setTimeout(handOff, 250); } });
     });
   })();
 

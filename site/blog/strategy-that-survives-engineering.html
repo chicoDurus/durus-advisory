@@ -46,7 +46,14 @@
       <a class="lnk" href="../index.html#about">About</a>
       <a class="lnk" href="../index.html#blog" aria-current="page">Blog</a>
       <a class="btn" href="https://calendly.com/durusadvisory" target="_blank" rel="noopener">Book a call <span class="arw" aria-hidden="true">↗</span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu"><span></span><span></span></button>
     </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="../index.html#approach">What we offer</a>
+    <a href="../index.html#method">How we work</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#blog" aria-current="page">Blog</a>
   </div>
 </header>
 
@@ -153,6 +160,7 @@
 </footer>
 
 <script src="../assets/logo.js"></script>
-<script>DurusLogo.header(document.getElementById('brandLogo'), { autoplay: true });</script>
+<script src="../assets/site.js"></script>
+<script>DurusLogo.header(document.getElementById('brandLogo'), { autoplay: false });</script>
 </body>
 </html>

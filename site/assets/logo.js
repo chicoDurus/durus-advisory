@@ -65,6 +65,10 @@
 
     this.letters = this.makeLetters(WORD);
     this.subs = this.makeLetters(SUB);
+    var D = this.letters[0];
+    this.dx = parseFloat(D.getAttribute("x"));
+    this.dw = WORD.size * 0.72;
+    try { this.dw = D.getComputedTextLength() || this.dw; } catch (e) {}
   };
 
   // Lay out each string exactly as the static badge does (letter-spacing,
@@ -114,10 +118,7 @@
 
     // The D: large in the centre, then shrinks into its slot.
     var D = this.letters[0];
-    var dx = parseFloat(D.getAttribute("x"));
-    var dw = WORD.size * 0.72;
-    try { dw = D.getComputedTextLength() || dw; } catch (e) {}
-    var dcx = dx + dw / 2, dcy = WORD.y - WORD.size * CAP / 2;
+    var dcx = this.dx + this.dw / 2, dcy = WORD.y - WORD.size * CAP / 2;
     var intro = out(clamp(t / 0.8));
     var pd = inOut(clamp((t - 2.0) / 1.5));
     var s = lerp(lerp(this.introScale * 1.15, this.introScale, intro), 1, pd);

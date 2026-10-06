@@ -22,7 +22,7 @@ When I arrived, a few things were obvious within the first week.
 
 **Everyone was busy and nobody was happy.** Engineers felt pulled in all directions. Stakeholders felt ignored. Leadership felt the team was slow and wondered whether it needed more people.
 
-## Week 1–2: Make the work visible
+## Week 1-2: Make the work visible
 
 I didn't start with Scrum. I started with a list.
 
@@ -32,7 +32,7 @@ Then we put up a simple board with five columns: To do, In progress, In review, 
 
 **Lesson:** you can't fix a process people can't see. Visibility comes first, and it's often enough to start the right conversations on its own.
 
-## Week 3–4: One owner for priorities
+## Week 3-4: One owner for priorities
 
 This was the hardest step, and it wasn't a process change. It was a leadership decision.
 
@@ -44,7 +44,7 @@ We also created an explicit fast lane for genuine emergencies: production incide
 
 **Lesson:** Scrum assumes a product owner with real authority. If the organisation won't grant it, no amount of ceremony will compensate.
 
-## Week 5–6: Limit work in progress
+## Week 5-6: Limit work in progress
 
 With one ordered backlog, we set a hard limit: no more than eight items in progress across the team. New work couldn't start until something finished.
 

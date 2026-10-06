@@ -13,7 +13,6 @@ SRC = os.path.join(ROOT, "src", "posts")
 SITE = os.path.join(ROOT, "site")
 BLOG = os.path.join(SITE, "blog")
 BASE_URL = "https://www.durusadvisory.com"
-AUTHOR = "Tvrtko Aščić"
 
 BADGE = """<svg class="brand-badge" id="brandLogo" viewBox="0 0 950 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M 647.02 129.55 A 210 210 0 0 0 302.98 129.55" fill="none" stroke="#D96A2C" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.1 16.699"/>
@@ -112,7 +111,7 @@ def post_page(p, newer, older):
         "@context": "https://schema.org", "@type": "BlogPosting",
         "headline": p["title"], "description": p["excerpt"],
         "datePublished": p["date"], "dateModified": p["date"],
-        "author": {"@type": "Person", "name": AUTHOR},
+        "author": {"@type": "Organization", "name": "Durus Advisory", "url": BASE_URL},
         "publisher": {"@type": "Organization", "name": "Durus Advisory", "url": BASE_URL},
         "mainEntityOfPage": url,
     }
@@ -134,7 +133,6 @@ def post_page(p, newer, older):
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{esc(p['title'])} | Durus Advisory</title>
 <meta name="description" content="{esc(p['excerpt'])}" />
-<meta name="author" content="{AUTHOR}" />
 <link rel="canonical" href="{url}" />
 <meta property="og:title" content="{esc(p['title'])}" />
 <meta property="og:description" content="{esc(p['excerpt'])}" />
@@ -167,7 +165,6 @@ def post_page(p, newer, older):
       <div class="post-meta">
         <time datetime="{p['date']}"><b>{p['date_h']}</b></time>
         <span>{p['minutes']} min read</span>
-        <span>By {AUTHOR}</span>
       </div>
       <p class="post-lede">{esc(p['excerpt'])}</p>
     </header>
@@ -177,15 +174,6 @@ def post_page(p, newer, older):
     <div class="post-body">
 {p['html']}
     </div>
-    <aside class="author">
-      <div class="author-in">
-        <svg class="author-mark" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="192" fill="#131316"/><circle cx="200" cy="200" r="178" fill="none" stroke="#D96A2C" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.1 12.9047"/><text x="200" y="292" text-anchor="middle" font-family="Domine,Georgia,serif" font-weight="700" font-size="250" fill="#D96A2C">D</text></svg>
-        <div>
-          <div class="nm">{AUTHOR}</div>
-          <div class="rl">Founder, Durus Advisory · Product &amp; delivery</div>
-        </div>
-      </div>
-    </aside>
   </article>
 
   {more}

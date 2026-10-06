@@ -97,7 +97,7 @@ For a two-week sprint, a reasonable total is:
 | Daily standup | Daily | 15 min |
 | Refinement | Twice per sprint | 45 min each |
 | Sprint planning | Once | 90 min max |
-| Sprint review | Once | 45–60 min |
+| Sprint review | Once | 45-60 min |
 | Retrospective | Once | 60 min |
 
 That's roughly six hours per person per sprint, or about 7% of working time. If your team spends much more than that, look for meetings without a clear output. If it spends much less, check whether refinement or retros are being skipped, and whether planning is quietly paying the price.

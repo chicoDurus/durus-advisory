@@ -87,3 +87,6 @@
   .menu-btn{background:var(--signal);border-color:var(--signal)}
   .menu-btn span{background:var(--ink)}
   .menu-btn:hover{background:var(--signal-deep);border-color:var(--signal-deep)}
+
+  /* Service pages: descriptive H1, slogan underneath */
+  .page-slogan{margin-top:14px;font-family:"Domine",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(22px,3vw,34px);line-height:1.25;color:var(--signal);max-width:28ch;text-wrap:balance}

@@ -41,6 +41,9 @@ NAV = [("services", "/services", "Services"), ("method", "/how-we-work", "How we
 
 CSS = ""
 
+WEBSITE_LD = {"@context": "https://schema.org", "@type": "WebSite", "name": "Durus Advisory",
+              "alternateName": "Durus", "url": BASE_URL + "/"}
+
 ORG_LD = {"@context": "https://schema.org", "@type": "Organization", "name": "Durus Advisory",
           "url": BASE_URL + "/", "logo": BASE_URL + "/favicon-512.png", "email": EMAIL,
           "sameAs": [LINKEDIN], "description": "Product and strategy advisory for complex digital platforms."}
@@ -60,6 +63,25 @@ def front_matter(raw):
             v = v[1:-1]
         meta[k.strip()] = v
     return meta, m.group(2)
+
+
+def faq_items(markdown_body):
+    """Questions (### headings) and answers under the '## Questions' section."""
+    m = re.search(r"^## Questions\s*\n(.*?)(?=^## |\Z)", markdown_body, re.S | re.M)
+    if not m:
+        return []
+    items = []
+    for q, a in re.findall(r"^### (.+?)\n+(.*?)(?=^### |\Z)", m.group(1), re.S | re.M):
+        items.append((q.strip(), re.sub(r"\s+", " ", a).strip()))
+    return items
+
+
+def breadcrumbs(*trail):
+    """trail = (name, path) pairs after Home."""
+    items = [("Home", "/")] + list(trail)
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList",
+            "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": BASE_URL + p}
+                                for i, (n, p) in enumerate(items)]}
 
 
 def md(text):
@@ -94,6 +116,7 @@ def load_services():
             meta, body = front_matter(open(os.path.join(folder, name), encoding="utf-8").read())
             meta["url"] = f"/services/{meta['slug']}"
             meta["html"] = md(body)
+            meta["faq"] = faq_items(body)
             meta["related"] = [s.strip() for s in meta.get("related", "").split(",") if s.strip()]
             services.append(meta)
     return services
@@ -289,7 +312,8 @@ def post_page(p, newer, older):
            "description": p["excerpt"], "datePublished": p["date"], "dateModified": p["date"],
            "author": {"@type": "Organization", "name": "Durus Advisory", "url": BASE_URL},
            "publisher": {"@type": "Organization", "name": "Durus Advisory", "url": BASE_URL},
-           "mainEntityOfPage": BASE_URL + p["url"], "image": BASE_URL + og}]
+           "mainEntityOfPage": BASE_URL + p["url"], "image": BASE_URL + og},
+          breadcrumbs(("Blog", "/blog"), (p["title"], p["url"]))]
     related = [x for x in (older, newer) if x]
     more = ""
     if related:
@@ -343,8 +367,9 @@ def service_page(s, services, posts_by_slug):
     others = "\n".join(link_card("Service", o["title"], o["who"], o["url"]) for o in services if o is not s)
     body = f"""  <header class="page-head wrap">
     <a class="back" href="/services"><span aria-hidden="true">←</span> All services</a>
-    <span class="eyebrow">{esc(s['title'])}</span>
-    <h1>{esc(s['h1'])}</h1>
+    <span class="eyebrow">Services</span>
+    <h1>{esc(s['title'])}</h1>
+    <p class="page-slogan">{esc(s['h1'])}</p>
     <p class="page-lede">{esc(s['lede'])}</p>
     <div class="page-cta">
       <a class="btn" href="{CALENDLY}" target="_blank" rel="noopener">Book a call <span class="arw" aria-hidden="true">↗</span></a>
@@ -373,7 +398,12 @@ def service_page(s, services, posts_by_slug):
 """
     ld = [{"@context": "https://schema.org", "@type": "Service", "name": s["title"], "description": s["description"],
            "provider": {"@type": "Organization", "name": "Durus Advisory", "url": BASE_URL}, "areaServed": "Europe",
-           "url": BASE_URL + s["url"]}]
+           "url": BASE_URL + s["url"]},
+          breadcrumbs(("Services", "/services"), (s["title"], s["url"]))]
+    if s["faq"]:
+        ld.append({"@context": "https://schema.org", "@type": "FAQPage",
+                   "mainEntity": [{"@type": "Question", "name": q,
+                                   "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in s["faq"]]})
     return layout(path=s["url"], title=f"{s['title']} | Durus Advisory", description=s["description"],
                   body=body, active="services", ld=ld)
 
@@ -411,7 +441,12 @@ def main():
         for k, v in snippets.items():
             body = body.replace(k, v)
         path = meta["path"]
-        ld = [ORG_LD] if path == "/" else None
+        if path == "/":
+            ld = [WEBSITE_LD, ORG_LD]
+        elif meta.get("sitemap") == "no":
+            ld = None
+        else:
+            ld = [breadcrumbs((meta["title"].split(" | ")[0], path))]
         page = layout(path=path, title=meta["title"], description=meta["description"], body=body,
                       active=meta.get("nav", ""), intro=meta.get("intro") == "yes", cta=meta.get("cta") != "no", ld=ld)
         write("index.html" if path == "/" else path.strip("/") + ".html", page)

@@ -130,14 +130,13 @@ def header(active):
 def footer():
     return f"""<footer>
   <div class="wrap foot-in">
-    <span>© {dt.date.today().year} Durus Advisory · Cyprus</span>
+    <span>© {dt.date.today().year} Durus Advisory</span>
     <div class="foot-links">
       <a href="/services">Services</a>
       <a href="/how-we-work">How we work</a>
       <a href="/about">About</a>
       <a href="/blog">Blog</a>
       <a href="/contact">Contact</a>
-      <a href="/privacy">Privacy</a>
       <a href="{LINKEDIN}" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>

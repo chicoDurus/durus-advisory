@@ -2,13 +2,50 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/blog/agile-scrum-waterfall-kanban", "destination": "/blog/do-you-really-need-scrum", "permanent": true },
-    { "source": "/blog/agile-scrum-waterfall-kanban.html", "destination": "/blog/do-you-really-need-scrum", "permanent": true },
-    { "source": "/blog/fixing-standups-planning-refinement-retros", "destination": "/blog/do-you-really-need-scrum", "permanent": true },
-    { "source": "/blog/fixing-standups-planning-refinement-retros.html", "destination": "/blog/do-you-really-need-scrum", "permanent": true },
-    { "source": "/blog/writing-product-documentation", "destination": "/blog/what-a-product-audit-should-tell-you", "permanent": true },
-    { "source": "/blog/writing-product-documentation.html", "destination": "/blog/what-a-product-audit-should-tell-you", "permanent": true },
-    { "source": "/blog/why-project-management-matters", "destination": "/blog/when-to-bring-in-fractional-product-leadership", "permanent": true },
-    { "source": "/blog/why-project-management-matters.html", "destination": "/blog/when-to-bring-in-fractional-product-leadership", "permanent": true }
+    {
+      "source": "/blog/agile-scrum-waterfall-kanban",
+      "destination": "/blog/do-you-really-need-scrum",
+      "permanent": true
+    },
+    {
+      "source": "/blog/agile-scrum-waterfall-kanban.html",
+      "destination": "/blog/do-you-really-need-scrum",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fixing-standups-planning-refinement-retros",
+      "destination": "/blog/do-you-really-need-scrum",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fixing-standups-planning-refinement-retros.html",
+      "destination": "/blog/do-you-really-need-scrum",
+      "permanent": true
+    },
+    {
+      "source": "/blog/writing-product-documentation",
+      "destination": "/blog/what-a-product-audit-should-tell-you",
+      "permanent": true
+    },
+    {
+      "source": "/blog/writing-product-documentation.html",
+      "destination": "/blog/what-a-product-audit-should-tell-you",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-project-management-matters",
+      "destination": "/blog/when-to-bring-in-fractional-product-leadership",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-project-management-matters.html",
+      "destination": "/blog/when-to-bring-in-fractional-product-leadership",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/",
+      "permanent": false
+    }
   ]
 }

@@ -5,6 +5,8 @@ Output (in this folder):
   durus-business-card-front.pdf / -back.pdf   the same, one side per file
   preview-front.png / preview-back.png        trimmed previews at 600 dpi
   preview-guides.png                          both sides with trim (orange) and safe-area (blue) lines
+  durus-business-card-mask-orange.pdf         finish mask: every orange element in solid black (spot UV / foil / emboss)
+  durus-business-card-mask-white.pdf          finish mask: every light-text element in solid black (white foil / white ink)
 
 Run: python3 make_cards.py   (needs Playwright + Chromium)
 Edit the CARD dictionary below to change contact details.
@@ -113,6 +115,14 @@ def back():
 </svg>"""
 
 
+def mask(svg, keep):
+    """Turn a side into a finish mask: the kept colours become solid black, everything else white."""
+    colours = {"orange": [ORANGE], "white": [INK, GREY]}[keep]
+    for c in (ORANGE, INK, GREY, BLACK):
+        svg = svg.replace(f'"{c}"', '"#000000"' if c in colours else '"#FFFFFF"')
+    return svg
+
+
 def page(svg):
     return f"<!doctype html><html><head><meta charset='utf-8'><style>{CSS}</style></head><body>{svg}</body></html>"
 
@@ -142,10 +152,26 @@ async def main():
             await pg.pdf(path=os.path.join(HERE, name), width=f"{PW}mm", height=f"{PH}mm",
                          print_background=True, margin={"top": "0", "right": "0", "bottom": "0", "left": "0"},
                          prefer_css_page_size=True)
+        for keep in ("orange", "white"):
+            html = "<!doctype html><html><head><meta charset='utf-8'><style>" + CSS + \
+                   "body>svg{page-break-after:always}</style></head><body>" + \
+                   mask(sides["front"], keep) + mask(sides["back"], keep) + "</body></html>"
+            open(tmp, "w", encoding="utf-8").write(html)
+            await pg.goto("file://" + tmp)
+            await pg.evaluate("document.fonts.ready")
+            await pg.wait_for_timeout(300)
+            await pg.pdf(path=os.path.join(HERE, f"durus-business-card-mask-{keep}.pdf"), width=f"{PW}mm", height=f"{PH}mm",
+                         print_background=True, margin={"top": "0", "right": "0", "bottom": "0", "left": "0"},
+                         prefer_css_page_size=True)
+            sides[f"mask-{keep}-front"] = mask(sides["front"], keep)
+            sides[f"mask-{keep}-back"] = mask(sides["back"], keep)
         # previews: 600 dpi = 23.622 px/mm
         scale = 600 / 25.4
         for side, svg in sides.items():
-            for name, content, clip in [(f"preview-{side}.png", svg, True), (f"_guide-{side}.png", guides(svg), False)]:
+            variants = [(f"preview-{side}.png", svg, True)]
+            if side in ("front", "back"):
+                variants.append((f"_guide-{side}.png", guides(svg), False))
+            for name, content, clip in variants:
                 open(tmp, "w", encoding="utf-8").write(page(content).replace(f"body>svg{{display:block;width:{PW}mm;height:{PH}mm}}",
                                                                              f"body>svg{{display:block;width:{PW * scale}px;height:{PH * scale}px}}"))
                 await pg.set_viewport_size({"width": round(PW * scale), "height": round(PH * scale)})

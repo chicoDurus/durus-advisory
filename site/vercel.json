@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    { "source": "/blog/agile-scrum-waterfall-kanban.html", "destination": "/blog/do-you-really-need-scrum.html", "permanent": true },
+    { "source": "/blog/fixing-standups-planning-refinement-retros.html", "destination": "/blog/do-you-really-need-scrum.html", "permanent": true },
+    { "source": "/blog/writing-product-documentation.html", "destination": "/blog/what-a-product-audit-should-tell-you.html", "permanent": true },
+    { "source": "/blog/why-project-management-matters.html", "destination": "/blog/when-to-bring-in-fractional-product-leadership.html", "permanent": true }
+  ]
+}

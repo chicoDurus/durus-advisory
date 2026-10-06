@@ -300,9 +300,54 @@ def gap():
     return svg(b, INK2)
 
 
-COVERS = dict(gantt=gantt, frameworks=frameworks, question=question, chaos=chaos,
+# 12 - Fractional leadership: an org chart with one part-time seat in ochre
+def orgchart():
+    b = ""
+    top = (800, 230)
+    mids = [(420, 500), (800, 500), (1180, 500)]
+    lows = [(300, 760), (540, 760), (680, 760), (920, 760), (1060, 760), (1300, 760)]
+    def link(a, c):
+        my = (a[1] + c[1]) / 2
+        return f'<path d="M{a[0]} {a[1]+45} V{my} H{c[0]} V{c[1]-45}" fill="none" stroke="{FG}" stroke-opacity=".22" stroke-width="3"/>'
+    for m in mids: b += link(top, m)
+    for i, l in enumerate(lows): b += link(mids[i // 2], l)
+    b += f'<rect x="{top[0]-110}" y="{top[1]-45}" width="220" height="90" fill="{FG}"/>'
+    for i, (x, y) in enumerate(mids):
+        if i == 1:
+            b += f'<rect x="{x-110}" y="{y-45}" width="220" height="90" fill="{OC}" fill-opacity=".18" stroke="{OC}" stroke-width="5" stroke-dasharray="16 10"/>'
+            b += f'<rect x="{x-110}" y="{y-45}" width="88" height="90" fill="{OC}"/>'
+        else:
+            b += f'<rect x="{x-110}" y="{y-45}" width="220" height="90" fill="{LINE2}"/>'
+    for x, y in lows:
+        b += f'<rect x="{x-60}" y="{y-45}" width="120" height="90" fill="{INK3}" stroke="{LINE2}" stroke-width="3"/>'
+    return svg(b, INK)
+
+
+# 13 - Multi-brand drift: identical brand panels slowly falling out of line
+def brands():
+    b = ""
+    n = 5
+    for i in range(n):
+        x0 = 150 + i * 270
+        dx, dy, rot = i * 6, i * i * 9, i * i * 1.1
+        g = f'<g transform="translate({dx} {dy}) rotate({rot} {x0+110} 500)">'
+        g += f'<rect x="{x0}" y="200" width="220" height="600" fill="{INK3}" stroke="{LINE2}" stroke-width="3"/>'
+        g += f'<rect x="{x0}" y="200" width="220" height="56" fill="{OC if i == 0 else LINE2}" fill-opacity="{1 - i*0.15}"/>'
+        for k in range(5):
+            w = [160, 120, 170, 100, 140][(k + i) % 5] if i > 1 else [160, 120, 170, 100, 140][k]
+            g += f'<rect x="{x0+30}" y="{300 + k*48}" width="{w}" height="14" fill="{FG}" fill-opacity=".25"/>'
+        g += f'<rect x="{x0+30}" y="{580 + (i*14 if i>1 else 0)}" width="160" height="150" fill="{FG}" fill-opacity="{.12 + (0 if i>2 else .1)}"/>'
+        g += f'<rect x="{x0+30}" y="750" width="{110 - i*12}" height="26" fill="{OC}" fill-opacity="{1 - i*0.18}"/>'
+        g += '</g>'
+        b += g
+    b += f'<line x1="120" y1="200" x2="1480" y2="200" stroke="{OC}" stroke-width="2" stroke-dasharray="6 10" stroke-opacity=".6"/>'
+    return svg(b, INK)
+
+
+COVERS = dict(question=question, chaos=chaos,
               calendar=calendar, documents=documents, launch=launch, busy=busy,
-              roadmap=roadmap, fracture=fracture, gap=gap)
+              roadmap=roadmap, fracture=fracture, gap=gap,
+              orgchart=orgchart, brands=brands)
 
 for name, fn in COVERS.items():
     with open(os.path.join(OUT, f"{name}.svg"), "w") as fh:

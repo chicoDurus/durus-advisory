@@ -4,13 +4,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Bringing Scrum Into a Disorganized Organization: A Case Study | Durus Advisory</title>
-<meta name="description" content="No backlog, five people setting priorities, and releases that slipped by default. How one product team moved from chaos to a working rhythm in a quarter, and what I&#x27;d do differently." />
+<meta name="description" content="No single backlog, five executives setting priorities, and features that took months to finish. How a product organisation got to a working rhythm in one quarter, and why the framework came last." />
 <link rel="canonical" href="https://www.durusadvisory.com/blog/scrum-in-a-disorganized-organization.html" />
 <meta property="og:title" content="Bringing Scrum Into a Disorganized Organization: A Case Study" />
-<meta property="og:description" content="No backlog, five people setting priorities, and releases that slipped by default. How one product team moved from chaos to a working rhythm in a quarter, and what I&#x27;d do differently." />
+<meta property="og:description" content="No single backlog, five executives setting priorities, and features that took months to finish. How a product organisation got to a working rhythm in one quarter, and why the framework came last." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.durusadvisory.com/blog/scrum-in-a-disorganized-organization.html" />
-<meta property="article:published_time" content="2026-06-23" />
+<meta property="article:published_time" content="2026-05-26" />
 <meta property="og:image" content="https://www.durusadvisory.com/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Domine:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/post.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Bringing Scrum Into a Disorganized Organization: A Case Study", "description": "No backlog, five people setting priorities, and releases that slipped by default. How one product team moved from chaos to a working rhythm in a quarter, and what I'd do differently.", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Organization", "name": "Durus Advisory", "url": "https://www.durusadvisory.com"}, "publisher": {"@type": "Organization", "name": "Durus Advisory", "url": "https://www.durusadvisory.com"}, "mainEntityOfPage": "https://www.durusadvisory.com/blog/scrum-in-a-disorganized-organization.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Bringing Scrum Into a Disorganized Organization: A Case Study", "description": "No single backlog, five executives setting priorities, and features that took months to finish. How a product organisation got to a working rhythm in one quarter, and why the framework came last.", "datePublished": "2026-05-26", "dateModified": "2026-05-26", "author": {"@type": "Organization", "name": "Durus Advisory", "url": "https://www.durusadvisory.com"}, "publisher": {"@type": "Organization", "name": "Durus Advisory", "url": "https://www.durusadvisory.com"}, "mainEntityOfPage": "https://www.durusadvisory.com/blog/scrum-in-a-disorganized-organization.html"}</script>
 </head>
 <body>
 
@@ -63,63 +63,51 @@
       <a class="back" href="../index.html#blog"><span aria-hidden="true">←</span> All posts</a>
       <h1>Bringing Scrum Into a Disorganized Organization: A Case Study</h1>
       <div class="post-meta">
-        <time datetime="2026-06-23"><b>23 Jun 2026</b></time>
-        <span>5 min read</span>
+        <time datetime="2026-05-26"><b>26 May 2026</b></time>
+        <span>4 min read</span>
       </div>
-      <p class="post-lede">No backlog, five people setting priorities, and releases that slipped by default. How one product team moved from chaos to a working rhythm in a quarter, and what I&#x27;d do differently.</p>
+      <p class="post-lede">No single backlog, five executives setting priorities, and features that took months to finish. How a product organisation got to a working rhythm in one quarter, and why the framework came last.</p>
     </header>
     <figure class="post-cover wrap">
       <img src="../assets/covers/chaos.svg" alt="" width="1600" height="1000">
     </figure>
     <div class="post-body">
-<p><em>This is a composite case drawn from more than one engagement. Company details are removed and figures are rounded, but the problems and the sequence of fixes are real.</em></p>
+<p><em>This is a composite drawn from more than one engagement. Company details are removed and figures are rounded. The problems and the order of the fixes are real.</em></p>
 <h2>The starting point</h2>
-<p>The company ran a set of consumer-facing web products on a shared platform. About twelve engineers, two QA, one designer and a product function that was really one overloaded person. Revenue was healthy, which is partly why the problems had been tolerated for so long.</p>
-<p>When I arrived, a few things were obvious within the first week.</p>
-<p><strong>There was no single backlog.</strong> Work lived in Jira, in a shared spreadsheet owned by marketing, in Slack threads and in the CEO&rsquo;s notes. Engineers picked up whatever the last person to message them asked for.</p>
-<p><strong>Five people set priorities.</strong> The CEO, the head of marketing, the head of operations, the compliance lead and the CTO could all put work into the team, and all of them did. Nobody could say no, so everything was &ldquo;urgent&rdquo;.</p>
-<p><strong>Nothing finished.</strong> At any given time the team had more than forty tickets in progress. Cycle time for an ordinary feature was measured in months. Releases happened when someone decided enough had piled up.</p>
-<p><strong>Everyone was busy and nobody was happy.</strong> Engineers felt pulled in all directions. Stakeholders felt ignored. Leadership felt the team was slow and wondered whether it needed more people.</p>
-<h2>Week 1-2: Make the work visible</h2>
-<p>I didn&rsquo;t start with Scrum. I started with a list.</p>
-<p>Every piece of work, from every source, went into one Jira project. That took most of the first week and surfaced about 280 items. Roughly a third were duplicates, already done or no longer relevant. We closed them.</p>
-<p>Then we put up a simple board with five columns: To do, In progress, In review, Testing, Done. Everything currently being worked on went into In progress. Seeing forty-plus cards in that column did more to convince leadership than any presentation I could have given.</p>
-<p><strong>Lesson:</strong> you can&rsquo;t fix a process people can&rsquo;t see. Visibility comes first, and it&rsquo;s often enough to start the right conversations on its own.</p>
-<h2>Week 3-4: One owner for priorities</h2>
-<p>This was the hardest step, and it wasn&rsquo;t a process change. It was a leadership decision.</p>
-<p>I put a proposal to the CEO: one product owner owns the order of the backlog. Everyone else can request, argue and escalate, but the order is decided in one place. Requests go through a weekly prioritisation session where stakeholders can make their case.</p>
-<p>It took two meetings to agree. The concern was that the product owner would become a bottleneck. What changed the CEO&rsquo;s mind was a simple exercise. We listed the top ten &ldquo;urgent&rdquo; items from each stakeholder and asked which ones he would do first. He couldn&rsquo;t answer without a conversation, which was exactly the point.</p>
-<p>We also created an explicit fast lane for genuine emergencies: production incidents and regulatory deadlines. Everything else went through the weekly session.</p>
-<p><strong>Lesson:</strong> Scrum assumes a product owner with real authority. If the organisation won&rsquo;t grant it, no amount of ceremony will compensate.</p>
-<h2>Week 5-6: Limit work in progress</h2>
-<p>With one ordered backlog, we set a hard limit: no more than eight items in progress across the team. New work couldn&rsquo;t start until something finished.</p>
-<p>The first two weeks were painful. Engineers had to swarm on stuck items, testers became a visible bottleneck, and code reviews that had sat for weeks suddenly mattered. But cycle time started dropping almost immediately, and for the first time in months things were actually reaching Done.</p>
-<h2>Week 7 onward: Introduce the Scrum rhythm</h2>
-<p>Only now did we introduce sprints. Two weeks, with:</p>
+<p>The business ran several consumer-facing web products on a shared platform. Around twelve engineers, two testers, one designer and a product function that was really one overloaded person. Revenue was healthy, which is partly why the problems had been tolerated for so long.</p>
+<p>Within the first week, a few things were obvious.</p>
+<p>There was no single backlog. Work lived in the ticketing tool, in a spreadsheet owned by marketing, in chat threads and in the CEO&rsquo;s notes. Engineers picked up whatever the last person to message them had asked for.</p>
+<p>Five people set priorities: the CEO, the heads of marketing and operations, the compliance lead and the CTO. All of them could put work into the team, and all of them did. Nobody could say no, so everything was urgent.</p>
+<p>Nothing finished. At any given moment there were more than forty tickets in progress. An ordinary feature took months from start to release.</p>
+<p>Everyone was busy and nobody was happy. Leadership&rsquo;s conclusion was that the team was too slow and probably needed more people.</p>
+<h2>Step one: one list</h2>
+<p>We didn&rsquo;t start with Scrum. We started by putting every piece of work, from every source, into one list. That took most of a week and surfaced about 280 items. Around a third were duplicates, already done or no longer relevant, so they were closed.</p>
+<p>Then a simple board went up, with every item currently in progress on it. Seeing more than forty cards in one column did more to convince leadership than any presentation could have.</p>
+<h2>Step two: one owner for priorities</h2>
+<p>This was the hard part, and it was a leadership decision, not a process change.</p>
+<p>The proposal to the CEO was simple. One product owner orders the backlog. Everyone else can request, argue and escalate in a weekly prioritisation session, but the order is decided in one place. Genuine emergencies, meaning production incidents and regulatory deadlines, get a fast lane.</p>
+<p>The concern was that one person would become a bottleneck. What changed the CEO&rsquo;s mind was an exercise: we listed the top ten urgent items from each of the five stakeholders and asked him which ones should come first. He couldn&rsquo;t answer without a long conversation, which was exactly the point.</p>
+<h2>Step three: finish things</h2>
+<p>With one ordered list, we set a hard limit of eight items in progress across the team. New work could start only when something finished.</p>
+<p>The first two weeks were uncomfortable. Testing became a visible bottleneck, code reviews that had sat for weeks suddenly mattered, and engineers had to work together on stuck items. But cycle time dropped almost immediately, and for the first time in months work was actually reaching customers.</p>
+<h2>Step four: a light rhythm</h2>
+<p>Only then did we add the Scrum skeleton: two-week sprints, a short daily standup, and a planning session capped at an hour. We reserved about a fifth of capacity for unplanned work, based on what the previous month had actually looked like.</p>
+<p>We deliberately didn&rsquo;t add much else. No fixed release train either. Releases went out when a piece of work was tested and ready, sometimes twice a week, sometimes once in two weeks. Forcing everything onto a fixed date would have meant either holding back finished work or rushing unfinished work, and neither helps the business.</p>
+<p>The team was trusted to run its own day-to-day. In return, the product owner expected clear weekly reporting and stepped in only when something was actually off track.</p>
+<h2>After one quarter</h2>
+<p>Compared with the month before we started, and rounded:</p>
 <ul>
-<li><strong>Sprint planning</strong>, capped at 90 minutes, with a single sprint goal</li>
-<li><strong>A 15-minute daily scrum</strong> focused on the board, not status reports</li>
-<li><strong>A sprint review</strong> where stakeholders saw working software</li>
-<li><strong>A retrospective</strong> with one agreed improvement each time</li>
+<li>work in progress went from over 40 items to under 10</li>
+<li>a standard feature went from roughly ten weeks to under three</li>
+<li>unplanned work settled at about a fifth of capacity, and it was now visible and planned for</li>
 </ul>
-<p>We kept the emergency lane and reserved about 20% of capacity for it, based on what the previous month&rsquo;s unplanned work had actually been. When the lane wasn&rsquo;t used, the team pulled from the backlog.</p>
-<p>The sprint review turned out to be the most valuable event by far. Stakeholders who had felt ignored for a year now saw progress every two weeks, and they could change direction based on something real rather than a ticket description.</p>
-<h2>Results after one quarter</h2>
-<p>Rounded, and measured against the month before we started:</p>
-<ul>
-<li>Work in progress went from 40+ items to under 10</li>
-<li>Median cycle time for a standard feature dropped from around ten weeks to under three</li>
-<li>Releases moved from irregular batches to a predictable two-week rhythm</li>
-<li>Unplanned work stabilised at around 20% of capacity, and it was now visible and accounted for</li>
-</ul>
-<p>The less measurable result mattered more. Arguments about priority moved from Slack DMs into a single weekly meeting. Engineers stopped feeling like they were serving five masters.</p>
-<h2>What I&rsquo;d do differently</h2>
-<p><strong>I&rsquo;d involve QA in the redesign earlier.</strong> Limiting WIP immediately exposed testing as the bottleneck, and the QA engineers felt blamed for a problem the old process had hidden. We fixed it by pairing developers with testers and automating the most repetitive regression checks, but I should have seen it coming.</p>
-<p><strong>I&rsquo;d set the definition of done on day one.</strong> For the first few sprints, &ldquo;done&rdquo; meant different things to different people. Some meant merged, some meant deployed, some meant tested in production. A short, written definition would have saved several awkward reviews.</p>
-<p><strong>I&rsquo;d spend less time on velocity.</strong> Leadership wanted a number, and velocity became that number. It took effort to shift the conversation to cycle time and sprint-goal completion, which said much more about how well the team was delivering.</p>
-<h2>The takeaway</h2>
-<p>The team didn&rsquo;t need Scrum first. It needed visibility, a single owner for priorities and a limit on how much it tried to do at once. Scrum gave that a rhythm, but the rhythm only worked because the foundations were already in place.</p>
-<p>If you&rsquo;re about to introduce Scrum into an organisation that feels chaotic, resist the urge to roll out all the ceremonies on day one. Fix ownership and visibility first. The framework sticks much better on a foundation that already makes sense to people.</p>
+<p>The bigger change was harder to measure. Arguments about priority moved out of private messages and into one weekly meeting. The business could finally see what was being built and why. The question of hiring more engineers went away, because the existing team turned out to be fast enough once it stopped being pulled in five directions.</p>
+<h2>What we&rsquo;d do differently</h2>
+<p>Bring testing into the redesign earlier. Limiting work in progress exposed testing as the bottleneck straight away, and the testers felt blamed for a problem the old process had hidden.</p>
+<p>Agree what &ldquo;done&rdquo; means on day one. For the first few sprints it meant merged to some people, released to others, and verified in production to a few. A one-paragraph definition would have saved several awkward conversations.</p>
+<h2>The takeaway for leadership</h2>
+<p>The team didn&rsquo;t need more process or more people. It needed one list, one person deciding the order, and a limit on how much it tried to do at once. The Scrum skeleton gave that a rhythm, but it only worked because the foundations were already in place.</p>
+<p>If your product organisation feels chaotic, resist rolling out a framework on day one. Fix visibility and ownership first.</p>
     </div>
   </article>
 
@@ -129,10 +117,10 @@
       <div class="more-grid">
       <a class="more-card" href="do-you-really-need-scrum.html">
         <img src="../assets/covers/question.svg" alt="" loading="lazy">
-        <div><span class="k">9 Jun 2026</span><h3>Do You Really Need Scrum?</h3></div>
-      </a><a class="more-card" href="fixing-standups-planning-refinement-retros.html">
+        <div><span class="k">12 May 2026</span><h3>Do You Really Need Scrum?</h3></div>
+      </a><a class="more-card" href="ship-when-its-ready.html">
         <img src="../assets/covers/calendar.svg" alt="" loading="lazy">
-        <div><span class="k">7 Jul 2026</span><h3>Fixing Your Meetings: Standups, Planning, Refinement and Retros</h3></div>
+        <div><span class="k">9 Jun 2026</span><h3>Ship When It&#x27;s Ready, Not When the Calendar Says So</h3></div>
       </a>
       </div>
     </div>

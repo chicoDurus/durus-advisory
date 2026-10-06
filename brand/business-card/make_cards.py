@@ -22,7 +22,7 @@ CARD = {
     "name": "TVRTKO AŠČIĆ",
     "title": "FOUNDER & PRINCIPAL",
     "email": "tvrtko@durusadvisory.com",
-    "phone": "+357 99 123 456",
+    "phone": "+357 96 420 889",
     "web": "durusadvisory.com",
     "place": "Limassol, Cyprus",
 }

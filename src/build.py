@@ -165,7 +165,7 @@ INTRO_HEAD = """<script>
   })();
 </script>"""
 
-INTRO_JS = '\n<script src="/assets/intro.js"></script>'
+INTRO_JS = '\n<script src="/assets/intro.js" defer></script>'
 
 INTRO_BODY = """<div class="intro" id="intro">
   <svg class="intro-logo" id="introLogo" viewBox="0 0 950 500" aria-hidden="true" focusable="false"></svg>
@@ -200,7 +200,7 @@ def layout(*, path, title, description, body, active="", intro=False, cta=True,
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0A0A0B">
 <link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/archivo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/archivo-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/domine-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>{CSS}</style>{lds}
 {INTRO_HEAD if intro else ""}
@@ -216,8 +216,8 @@ def layout(*, path, title, description, body, active="", intro=False, cta=True,
 
 {footer()}
 
-<script src="/assets/logo.js"></script>
-<script src="/assets/site.js"></script>{INTRO_JS if intro else ""}
+<script src="/assets/logo.js" defer></script>
+<script src="/assets/site.js" defer></script>{INTRO_JS if intro else ""}
 </body>
 </html>
 """

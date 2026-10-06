@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Writing Product Documentation People Actually Read | Durus Advisory</title>
+<meta name="description" content="PRDs, one-pagers, user stories, decision logs, release notes. Which documents a product team really needs, what goes in each, and how to keep them alive after the first draft." />
+<meta name="author" content="Tvrtko Aščić" />
+<link rel="canonical" href="https://durusadvisory.com/blog/writing-product-documentation.html" />
+<meta property="og:title" content="Writing Product Documentation People Actually Read" />
+<meta property="og:description" content="PRDs, one-pagers, user stories, decision logs, release notes. Which documents a product team really needs, what goes in each, and how to keep them alive after the first draft." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://durusadvisory.com/blog/writing-product-documentation.html" />
+<meta property="article:published_time" content="2026-07-21" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Ccircle cx='200' cy='200' r='192' fill='%230A0A0B'/%3E%3Ccircle cx='200' cy='200' r='178' fill='none' stroke='%23D96A2C' stroke-width='4.5' stroke-linecap='round' stroke-dasharray='0.1 12.9047'/%3E%3Ccircle cx='200' cy='200' r='152' fill='none' stroke='%23D96A2C' stroke-width='4' stroke-linecap='round' stroke-dasharray='0.1 10.8775'/%3E%3Ctext x='200' y='292' text-anchor='middle' font-family='Domine,Georgia,serif' font-weight='700' font-size='250' fill='%23D96A2C' letter-spacing='-6'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Domine:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/post.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Writing Product Documentation People Actually Read", "description": "PRDs, one-pagers, user stories, decision logs, release notes. Which documents a product team really needs, what goes in each, and how to keep them alive after the first draft.", "datePublished": "2026-07-21", "dateModified": "2026-07-21", "author": {"@type": "Person", "name": "Tvrtko Aščić"}, "publisher": {"@type": "Organization", "name": "Durus Advisory", "url": "https://durusadvisory.com"}, "mainEntityOfPage": "https://durusadvisory.com/blog/writing-product-documentation.html"}</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="../index.html" class="brand" aria-label="Durus Advisory home">
+      <svg class="brand-badge" id="brandLogo" viewBox="0 0 950 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M 647.02 129.55 A 210 210 0 0 0 302.98 129.55" fill="none" stroke="#D96A2C" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.1 16.699"/>
+        <path d="M 611.36 135.58 A 178 178 0 0 0 338.64 135.58" fill="none" stroke="#D96A2C" stroke-width="5" stroke-linecap="round" stroke-dasharray="0.1 14.021"/>
+        <path d="M 647.02 370.45 A 210 210 0 0 1 302.98 370.45" fill="none" stroke="#D96A2C" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.1 16.699"/>
+        <path d="M 611.36 364.42 A 178 178 0 0 1 338.64 364.42" fill="none" stroke="#D96A2C" stroke-width="5" stroke-linecap="round" stroke-dasharray="0.1 14.021"/>
+        <text x="475" y="270" text-anchor="middle" font-family="Domine,Georgia,serif" font-weight="700" font-size="150" letter-spacing="30" fill="#D96A2C">DURUS</text>
+        <text x="483" y="330" text-anchor="middle" font-family="'IBM Plex Mono',ui-monospace,Menlo,monospace" font-weight="500" font-size="42" letter-spacing="26" fill="#EDEAE4">ADVISORY</text>
+      </svg>
+      <span class="visually-hidden">Durus Advisory</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="lnk" href="../index.html#approach">What we offer</a>
+      <a class="lnk" href="../index.html#method">How we work</a>
+      <a class="lnk" href="../index.html#about">About</a>
+      <a class="lnk" href="../index.html#blog" aria-current="page">Blog</a>
+      <a class="btn" href="https://calendly.com/durusadvisory" target="_blank" rel="noopener">Book a call <span class="arw" aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article>
+    <header class="post-head wrap">
+      <a class="back" href="../index.html#blog"><span aria-hidden="true">←</span> All posts</a>
+      <h1>Writing Product Documentation People Actually Read</h1>
+      <div class="post-meta">
+        <time datetime="2026-07-21"><b>21 Jul 2026</b></time>
+        <span>5 min read</span>
+        <span>By Tvrtko Aščić</span>
+      </div>
+      <p class="post-lede">PRDs, one-pagers, user stories, decision logs, release notes. Which documents a product team really needs, what goes in each, and how to keep them alive after the first draft.</p>
+    </header>
+    <figure class="post-cover wrap">
+      <img src="../assets/covers/documents.svg" alt="" width="1600" height="1000">
+    </figure>
+    <div class="post-body">
+<p>Most product documentation has a short life. It&rsquo;s written in a burst before a project starts, read once by the people who have to approve it, and then left to rot while the real decisions happen in Slack.</p>
+<p>That isn&rsquo;t because documentation is useless. It&rsquo;s because teams use one kind of document for everything, write it for approval instead of use, and never update it.</p>
+<p>The fix starts with being clear about which document you&rsquo;re writing, and for whom.</p>
+<h2>The documents that matter</h2>
+<p>You don&rsquo;t need all of these for every piece of work. You need the right one at the right stage.</p>
+<h3>1. The one-pager (or opportunity brief)</h3>
+<p><strong>Purpose:</strong> decide whether something is worth doing.</p>
+<p><strong>Audience:</strong> leadership and the people who&rsquo;ll prioritise it.</p>
+<p><strong>What goes in it:</strong></p>
+<ul>
+<li>The problem, in a sentence or two, with evidence</li>
+<li>Who has the problem and how many of them there are</li>
+<li>What success looks like, as a measurable outcome</li>
+<li>A rough idea of the solution and its size</li>
+<li>Why now</li>
+</ul>
+<p>Keep it to one page. If you can&rsquo;t make the case in a page, you probably don&rsquo;t understand the problem well enough yet.</p>
+<h3>2. The product requirements document (PRD)</h3>
+<p><strong>Purpose:</strong> align the team on what&rsquo;s being built and why.</p>
+<p><strong>Audience:</strong> engineering, design, QA, and the stakeholders who&rsquo;ll sign it off.</p>
+<p><strong>What goes in it:</strong></p>
+<ul>
+<li>Context: link to the one-pager, summarise the problem and goal</li>
+<li>Scope: what&rsquo;s in, and explicitly what&rsquo;s out</li>
+<li>User flows or key scenarios</li>
+<li>Functional requirements, ideally as user stories with acceptance criteria</li>
+<li>Non-functional requirements: performance, security, accessibility, compliance</li>
+<li>Dependencies and risks</li>
+<li>Success metrics and how they&rsquo;ll be tracked</li>
+<li>Open questions, each with an owner</li>
+</ul>
+<p>The &ldquo;out of scope&rdquo; section is the most underrated part of any PRD. It&rsquo;s where you prevent the argument three weeks from now about something everyone assumed was included.</p>
+<h3>3. User stories and acceptance criteria</h3>
+<p><strong>Purpose:</strong> describe a buildable slice of value in enough detail to estimate, build and test.</p>
+<p><strong>Audience:</strong> the delivery team.</p>
+<p>The classic format still works: <em>As a [user], I want [capability], so that [benefit].</em> What matters more is the acceptance criteria. Write them as testable statements, for example:</p>
+<ul>
+<li><em>Given a player with an unverified account, when they attempt a withdrawal, then they&rsquo;re shown the verification step before the amount screen.</em></li>
+</ul>
+<p>If a tester can&rsquo;t turn a criterion into a test case, it&rsquo;s not specific enough.</p>
+<h3>4. The technical design document</h3>
+<p><strong>Purpose:</strong> agree how something will be built.</p>
+<p><strong>Audience:</strong> engineers, architects, security.</p>
+<p>Usually owned by engineering, not product. But the product owner should read it, because this is where trade-offs that affect scope, timeline and future flexibility get made.</p>
+<h3>5. The decision log</h3>
+<p><strong>Purpose:</strong> record what was decided, why, and by whom.</p>
+<p><strong>Audience:</strong> future you, and anyone who joins later.</p>
+<p>This is the document teams skip most and regret most. A simple table with date, decision, options considered, reasoning and owner is enough. Six months later, when someone asks why the bonus engine works the way it does, you have an answer that doesn&rsquo;t depend on someone&rsquo;s memory.</p>
+<h3>6. Release notes</h3>
+<p><strong>Purpose:</strong> tell people what changed.</p>
+<p><strong>Audience:</strong> depends on the version. Internal notes for support and operations, external notes for users or clients.</p>
+<p>Write the internal version for the person who&rsquo;ll answer a support ticket about the change tomorrow. What changed, who it affects, what they might see, and where to escalate.</p>
+<h2>Writing them well</h2>
+<p>A few habits that make any of these documents better.</p>
+<p><strong>Lead with the point.</strong> The first paragraph should tell a busy reader what this is, what&rsquo;s being asked of them, and by when.</p>
+<p><strong>Write for the reader&rsquo;s question.</strong> An engineer reading a PRD wants to know what to build and what &ldquo;done&rdquo; looks like. A compliance reviewer wants to know what data is collected and where it goes. Structure the document so each reader can find their answer quickly.</p>
+<p><strong>Prefer specifics.</strong> &ldquo;Fast&rdquo; is not a requirement. &ldquo;The game lobby loads in under two seconds on a mid-range Android device over 4G&rdquo; is.</p>
+<p><strong>Use the simplest format that works.</strong> A table for comparisons, a list for steps, a diagram for flows, prose for reasoning. Don&rsquo;t force everything into one.</p>
+<p><strong>Name an owner.</strong> Every document needs one person responsible for keeping it accurate.</p>
+<h2>Refining documents over time</h2>
+<p>A PRD isn&rsquo;t finished when it&rsquo;s approved. It should change as the team learns. Some practices that help:</p>
+<ul>
+<li><strong>Review in layers.</strong> Get the problem and goal agreed before anyone comments on the solution. Otherwise every review becomes a debate about button colours.</li>
+<li><strong>Comment, then resolve.</strong> Use comments for questions, but make sure each one is resolved and the document itself is updated. A PRD with fifty unresolved comments is a conversation, not a specification.</li>
+<li><strong>Version major changes.</strong> A short changelog at the top (&ldquo;v1.3, 14 July: removed SMS verification from scope, see decision log&rdquo;) saves a lot of confusion.</li>
+<li><strong>Link, don&rsquo;t duplicate.</strong> Link the PRD to the design file, the tickets and the decision log. Copying content between them guarantees they&rsquo;ll drift apart.</li>
+<li><strong>Close the loop after launch.</strong> Add the actual results against the success metrics. This turns the document into a record of what you learned, not just what you planned.</li>
+</ul>
+<h2>How much is enough</h2>
+<p>The right amount of documentation depends on what happens if something is misunderstood.</p>
+<p>For a small UI change on a single brand, a well-written ticket is plenty. For a new payment method across eight markets with different regulatory requirements, you want a proper PRD, a technical design, a decision log and careful release notes.</p>
+<p>Ask what it would cost if the team built the wrong thing, and document in proportion to that. Documentation isn&rsquo;t bureaucracy when it prevents expensive mistakes. It&rsquo;s bureaucracy when nobody reads it, and the difference is mostly down to how it&rsquo;s written.</p>
+    </div>
+    <aside class="author">
+      <div class="author-in">
+        <svg class="author-mark" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="192" fill="#131316"/><circle cx="200" cy="200" r="178" fill="none" stroke="#D96A2C" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.1 12.9047"/><text x="200" y="292" text-anchor="middle" font-family="Domine,Georgia,serif" font-weight="700" font-size="250" fill="#D96A2C">D</text></svg>
+        <div>
+          <div class="nm">Tvrtko Aščić</div>
+          <div class="rl">Founder, Durus Advisory · Product &amp; delivery</div>
+        </div>
+      </div>
+    </aside>
+  </article>
+
+  <section class="more">
+    <div class="wrap">
+      <h2>Keep reading</h2>
+      <div class="more-grid">
+      <a class="more-card" href="fixing-standups-planning-refinement-retros.html">
+        <img src="../assets/covers/calendar.svg" alt="" loading="lazy">
+        <div><span class="k">7 Jul 2026</span><h3>Fixing Your Meetings: Standups, Planning, Refinement and Retros</h3></div>
+      </a><a class="more-card" href="launching-a-product-beginning-to-end.html">
+        <img src="../assets/covers/launch.svg" alt="" loading="lazy">
+        <div><span class="k">4 Aug 2026</span><h3>Launching a Product, Beginning to End</h3></div>
+      </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap cta-in">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Got a product that's drifting, or a roadmap stalled between strategy and delivery?</h2>
+      <p>Send us a note. We'll tell you straight whether we can help.</p>
+      <div class="row">
+        <a class="btn" href="https://calendly.com/durusadvisory" target="_blank" rel="noopener">Book a call <span class="arw" aria-hidden="true">↗</span></a>
+        <a class="btn ghost email" href="mailto:durus@durusadvisory.com">durus@durusadvisory.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>© <span id="yr">2026</span> Durus Advisory</span>
+    <div class="foot-links">
+      <a href="../index.html#approach">What we offer</a>
+      <a href="../index.html#method">How we work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#blog">Blog</a>
+      <a href="mailto:durus@durusadvisory.com">Email</a>
+      <a href="https://linkedin.com/company/durus-advisory" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://calendly.com/durusadvisory" target="_blank" rel="noopener">Book a call</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/logo.js"></script>
+<script>DurusLogo.header(document.getElementById('brandLogo'), { autoplay: true });</script>
+</body>
+</html>

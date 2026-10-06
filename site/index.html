@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Durus Advisory - product, strategy & delivery</title>
+<meta name="description" content="Product and strategy advisory for complex digital platforms. Product direction, fractional ownership, multi-brand GAP analysis, and measurement; multi-brand, multi-market, compliance-aware." />
+
+<meta property="og:title" content="Durus Advisory - product, strategy & delivery" />
+<meta property="og:description" content="Digital products, shaped and shipped with judgment. Strategy that reaches delivery, in complex environments." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://durusadvisory.com" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Ccircle cx='200' cy='200' r='192' fill='%230A0A0B'/%3E%3Ccircle cx='200' cy='200' r='178' fill='none' stroke='%23D96A2C' stroke-width='4.5' stroke-linecap='round' stroke-dasharray='0.1 12.9047'/%3E%3Ccircle cx='200' cy='200' r='152' fill='none' stroke='%23D96A2C' stroke-width='4' stroke-linecap='round' stroke-dasharray='0.1 10.8775'/%3E%3Ctext x='200' y='292' text-anchor='middle' font-family='Domine,Georgia,serif' font-weight='700' font-size='250' fill='%23D96A2C' letter-spacing='-6'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Domine:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#0A0A0B;
+    --ink-2:#131316;
+    --ink-3:#191A1E;
+    --line:#25252A;
+    --line-2:#33333A;
+    --fg:#EDEAE4;
+    --fg-2:#B8B4AB;
+    --muted:#8A8781;
+    --signal:#D96A2C;
+    --signal-deep:#B85422;
+    --signal-soft:rgba(217,106,44,0.12);
+    --maxw:1120px;
+    --pad:clamp(20px,5vw,64px);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);color:var(--fg);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-size:17px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+  .mono{font-family:"IBM Plex Mono",monospace;font-weight:500;letter-spacing:0.02em}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--signal)}
+  h1,h2,h3{font-family:"Archivo",sans-serif;line-height:1.04;letter-spacing:-0.02em;font-weight:800}
+
+  .measure{width:100%;max-width:920px}
+  .measure svg{display:block;width:100%;height:auto;overflow:visible}
+  .measure .axis{stroke:var(--line-2);stroke-width:1}
+  .measure .guides line{stroke:var(--line);stroke-width:1;stroke-dasharray:2 5}
+  .measure .growth{fill:none;stroke:var(--signal);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+  .measure .lbl{fill:var(--muted);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:0.08em}
+  .measure .pt{fill:var(--ink);stroke:var(--signal);stroke-width:2.5;transition:fill .18s ease, r .18s ease}
+  .measure .lbl-btn{fill:var(--fg-2);font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:500;letter-spacing:0.06em;transition:fill .18s ease}
+  .measure .stops a{cursor:pointer}
+  .measure .stops a:hover .pt,.measure .stops a:focus-visible .pt{fill:var(--signal)}
+  .measure .stops a:hover .lbl-btn,.measure .stops a:focus-visible .lbl-btn{fill:var(--signal)}
+  .measure .stops a:focus{outline:none}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(10,10,11,0.72);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{display:flex;align-items:center;gap:9px}
+  .brand-badge{height:62px;width:auto;display:block}
+  .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a.lnk{font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:0.04em;color:var(--fg-2);transition:color .2s}
+  .nav-links a.lnk:hover{color:var(--fg)}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:500;letter-spacing:0.03em;background:var(--signal);color:var(--ink);padding:11px 18px;border:1px solid var(--signal);transition:transform .15s ease, background .2s ease, border-color .2s ease;white-space:nowrap}
+  .btn:hover{background:var(--signal-deep);border-color:var(--signal-deep);transform:translateY(-1px)}
+  .btn .arw{transition:transform .2s ease}
+  .btn:hover .arw{transform:translate(3px,-3px)}
+  .btn.ghost{background:transparent;color:var(--fg);border-color:var(--line-2)}
+  .btn.ghost:hover{background:var(--ink-2);border-color:var(--signal);color:var(--fg)}
+  .btn.ghost.email{color:var(--signal);border-color:var(--line-2)}
+  .btn.ghost.email:hover{background:var(--ink-2);border-color:var(--signal);color:var(--signal)}
+
+  @media(max-width:720px){.nav-links a.lnk{display:none}}
+
+  .hero{padding-top:clamp(64px,12vh,132px);padding-bottom:clamp(40px,7vh,72px)}
+  .hero .eyebrow{display:block;margin-bottom:26px}
+  h1.hero-h{font-size:clamp(38px,6.6vw,74px);font-weight:900;max-width:16ch}
+  h1.hero-h .em{color:var(--signal)}
+  .hero-sub{margin-top:26px;max-width:46ch;font-size:clamp(17px,2vw,20px);color:var(--fg-2)}
+  .hero-cta{margin-top:38px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero-cta .note{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);letter-spacing:0.03em}
+  .hero-measure{margin-top:clamp(48px,9vh,90px)}
+
+  section{padding-top:clamp(64px,10vh,110px);padding-bottom:clamp(64px,10vh,110px)}
+  .sec-head{margin-bottom:44px}
+  .sec-head h2{font-size:clamp(26px,3.6vw,40px)}
+  .divider{border:0;border-top:1px solid var(--line);margin:0}
+
+  .prose{max-width:60ch;font-size:clamp(18px,2.1vw,21px);color:var(--fg-2)}
+  .prose strong{color:var(--fg);font-weight:600}
+  .prose p+p{margin-top:22px}
+  .about-prose{max-width:64ch;font-size:clamp(19px,2.3vw,24px);line-height:1.5}
+  .about-prose em{font-family:"Domine",Georgia,serif;font-style:italic;color:var(--signal);font-weight:500}
+  .about-prose strong{color:var(--signal);font-weight:600}
+  .about-prose p+p{margin-top:28px}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .card{background:var(--ink);padding:clamp(26px,3.4vw,40px);transition:background .25s ease}
+  .card:hover{background:var(--ink-2)}
+  .card .k{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:0.1em;color:var(--signal);text-transform:uppercase}
+  .card h3{font-size:clamp(21px,2.5vw,26px);font-weight:800;margin-top:16px}
+  .card p{margin-top:14px;color:var(--fg-2);font-size:16px;line-height:1.62}
+  .card .tick{width:26px;height:2px;background:var(--line-2);margin-top:22px;transition:width .3s ease, background .3s ease}
+  .card:hover .tick{width:52px;background:var(--signal)}
+  @media(max-width:720px){.grid{grid-template-columns:1fr}}
+
+  .readout{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:8px}
+  .ro{background:var(--ink);padding:24px clamp(20px,2.6vw,30px);display:flex;flex-direction:column;gap:8px}
+  .ro .rk{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)}
+  .ro .rv{font-size:17px;color:var(--fg)}
+  .ro .rv b{font-family:"Archivo",sans-serif;font-weight:800}
+  @media(max-width:560px){.readout{grid-template-columns:1fr}}
+
+  .about-grid,.approach-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:clamp(30px,5vw,72px);align-items:start}
+  @media(max-width:820px){.about-grid,.approach-grid{grid-template-columns:1fr;gap:36px}}
+  .sig-card{border:1px solid var(--line);background:var(--ink-2);padding:28px}
+  .sig-card .nm{font-family:"Archivo",sans-serif;font-weight:900;font-size:22px}
+  .sig-card .rl{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--signal);letter-spacing:0.06em;margin-top:6px}
+  .sig-card ul{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:11px}
+  .sig-card li{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--fg-2);display:flex;gap:11px;align-items:flex-start}
+  .sig-card li::before{content:"";width:6px;height:6px;background:var(--signal);margin-top:6px;flex:none}
+
+  .cta-band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--ink) 0%, var(--ink-2) 100%)}
+
+  /* ---- What we offer ---- */
+  .offer-intro{max-width:60ch;margin-bottom:clamp(40px,6vh,64px)}
+  .offer-intro em{font-family:"Domine",Georgia,serif;font-style:italic;color:var(--signal);font-weight:500}
+  .offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .offer{background:var(--ink);padding:clamp(26px,3.4vw,40px);display:flex;flex-direction:column;gap:12px;transition:background .25s ease}
+  .offer:hover{background:var(--ink-2)}
+  .offer h3{font-size:clamp(20px,2.4vw,25px);font-weight:800;color:var(--fg)}
+  .offer p{color:var(--fg-2);font-size:16px;line-height:1.62}
+  @media(max-width:760px){.offer-grid{grid-template-columns:1fr}}
+
+  /* ---- DURUS acrostic (method section) ---- */
+  .acrostic{display:flex;flex-direction:column;gap:clamp(40px,6vh,72px);margin-top:8px}
+  .acr{
+    display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px);
+    align-items:center;
+  }
+  .acr-word{font-family:"Domine",Georgia,serif;line-height:1;display:flex;align-items:baseline;color:var(--fg)}
+  /* left-variant: word in col 1, copy in col 2 */
+  .acr-l .acr-word{grid-column:1;justify-content:flex-start}
+  .acr-l .acr-body{grid-column:2}
+  /* right-variant: copy in col 1, word in col 2 */
+  .acr-r .acr-word{grid-column:2;justify-content:flex-start}
+  .acr-r .acr-body{grid-column:1;grid-row:1}
+  .acr-word .drop{
+    font-family:"Domine",Georgia,serif;
+    font-weight:700;font-size:clamp(88px,13vw,190px);color:var(--signal);
+    letter-spacing:-0.02em;line-height:0.82;
+  }
+  .acr-word .rest{
+    font-family:"IBM Plex Mono",monospace;font-weight:500;
+    font-size:clamp(15px,1.8vw,20px);letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--fg-2);margin-left:2px;padding-bottom:10px;
+  }
+  .acr-copy{font-size:clamp(16px,1.9vw,19px);color:var(--fg-2);line-height:1.62;max-width:46ch}
+  .acr-rule{border-top:1px dashed var(--line-2);width:80px;margin-top:20px}
+  @media(max-width:760px){
+    .acr{grid-template-columns:1fr;gap:14px}
+    .acr-l .acr-word,.acr-r .acr-word,.acr-l .acr-body,.acr-r .acr-body{grid-column:1}
+    .acr-r .acr-word{grid-row:1}
+    .acr-r .acr-body{grid-row:2}
+  }
+
+  /* ---- Blog ---- */
+  .blog-intro{max-width:56ch;margin-top:16px;color:var(--fg-2);font-size:clamp(16px,1.9vw,19px)}
+  .posts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.8vw,20px)}
+  .post-card{display:flex;flex-direction:column;gap:12px;color:var(--fg);outline:none}
+  .pc-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--ink-2);border:1px solid var(--line);container-type:inline-size;transition:border-color .3s ease}
+  .post-card.featured{grid-column:span 2}
+  .post-card.featured .pc-media{aspect-ratio:auto;flex:1}
+  .pc-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .pc-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,11,0) 18%,rgba(10,10,11,.72) 52%,rgba(10,10,11,.96) 100%);pointer-events:none}
+  .pc-title,.pc-desc{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:clamp(16px,6cqi,30px);transition:opacity .35s ease, transform .45s cubic-bezier(.2,.7,.2,1)}
+  .pc-meta{display:block;font-family:"IBM Plex Mono",monospace;font-size:clamp(10.5px,3.2cqi,12px);letter-spacing:.12em;text-transform:uppercase;color:var(--fg-2);margin-bottom:10px}
+  .pc-title h3{text-shadow:0 1px 18px rgba(10,10,11,.6);font-size:clamp(19px,7.4cqi,30px);line-height:1.08;letter-spacing:-.015em;font-weight:800;text-wrap:balance;max-width:22ch}
+  .post-card.featured .pc-title h3{text-shadow:0 1px 18px rgba(10,10,11,.6);font-size:clamp(24px,5.6cqi,46px);max-width:20ch}
+  .pc-desc{top:0;display:flex;flex-direction:column;justify-content:flex-end;gap:clamp(10px,3.5cqi,16px);background:rgba(10,10,11,.9);opacity:0;transform:translateY(10px)}
+  .pc-desc p{font-size:clamp(14px,4.8cqi,17.5px);line-height:1.5;color:var(--fg);display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden;max-width:52ch}
+  .post-card.featured .pc-desc p{font-size:clamp(15px,3cqi,20px)}
+  .pc-read{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--signal)}
+  .pc-touch{display:none;font-size:15px;line-height:1.55;color:var(--fg-2)}
+  @media (hover:hover){
+    .post-card:hover .pc-media img{transform:scale(1.05)}
+    .post-card:hover .pc-media{border-color:var(--signal)}
+    .post-card:hover .pc-title{opacity:0;transform:translateY(-10px)}
+    .post-card:hover .pc-desc{opacity:1;transform:none}
+  }
+  .post-card:focus-visible .pc-media{border-color:var(--signal);outline:2px solid var(--signal);outline-offset:3px}
+  .post-card:focus-visible .pc-title{opacity:0}
+  .post-card:focus-visible .pc-desc{opacity:1;transform:none}
+  @media (hover:none){.pc-touch{display:block}}
+  @media(max-width:960px){
+    .posts{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .post-card.featured .pc-media{aspect-ratio:16/9;flex:none}
+  }
+  @media(max-width:600px){
+    .posts{grid-template-columns:1fr}
+    .post-card.featured{grid-column:auto}
+    .post-card.featured .pc-media{aspect-ratio:4/3}
+  }
+
+  /* ---- Intro ---- */
+  .intro{display:none;position:fixed;inset:0;z-index:100;background:var(--ink);align-items:center;justify-content:center;padding:24px;transition:background-color .7s ease}
+  .intro-on .intro{display:flex}
+  .intro-on body{overflow:hidden}
+  .intro-on #brandLogo{opacity:0}
+  .intro-logo{width:min(92vw,880px);height:auto;display:block;transform-origin:0 0;overflow:visible}
+  .intro-skip{position:absolute;right:clamp(16px,4vw,40px);bottom:clamp(16px,4vh,40px);font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--line-2);padding:10px 16px;cursor:pointer;transition:color .2s,border-color .2s,opacity .3s}
+  .intro-skip:hover{color:var(--fg);border-color:var(--signal)}
+  .intro.leaving{background-color:rgba(10,10,11,0);pointer-events:none}
+  .intro.leaving .intro-skip{opacity:0}
+
+  .cta-in{text-align:center;max-width:640px;margin:0 auto}
+  .cta-in h2{font-size:clamp(28px,4.4vw,48px);font-weight:900}
+  .cta-in p{margin-top:20px;color:var(--fg-2);max-width:44ch;margin-left:auto;margin-right:auto;font-size:18px}
+  .cta-in .row{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  footer{padding:40px 0}
+  .foot-in{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);letter-spacing:0.03em}
+  .foot-in a:hover{color:var(--fg)}
+  .foot-links{display:flex;gap:24px;flex-wrap:wrap}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  :focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+<script>
+  /* Play the logo intro once per browser session, unless motion is reduced. */
+  (function(){
+    try{
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(!reduce && !sessionStorage.getItem('durusIntroSeen')) document.documentElement.classList.add('intro-on');
+    }catch(e){}
+  })();
+</script>
+</head>
+<body>
+
+<div class="intro" id="intro" aria-hidden="true">
+  <svg class="intro-logo" id="introLogo" viewBox="0 0 950 500"></svg>
+  <button class="intro-skip" id="introSkip" type="button">Skip intro</button>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand" aria-label="Durus Advisory home">
+      <svg class="brand-badge" id="brandLogo" viewBox="0 0 950 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M 647.02 129.55 A 210 210 0 0 0 302.98 129.55" fill="none" stroke="#D96A2C" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.1 16.699"/>
+        <path d="M 611.36 135.58 A 178 178 0 0 0 338.64 135.58" fill="none" stroke="#D96A2C" stroke-width="5" stroke-linecap="round" stroke-dasharray="0.1 14.021"/>
+        <path d="M 647.02 370.45 A 210 210 0 0 1 302.98 370.45" fill="none" stroke="#D96A2C" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.1 16.699"/>
+        <path d="M 611.36 364.42 A 178 178 0 0 1 338.64 364.42" fill="none" stroke="#D96A2C" stroke-width="5" stroke-linecap="round" stroke-dasharray="0.1 14.021"/>
+        <text x="475" y="270" text-anchor="middle" font-family="Domine,Georgia,serif" font-weight="700" font-size="150" letter-spacing="30" fill="#D96A2C">DURUS</text>
+        <text x="483" y="330" text-anchor="middle" font-family="'IBM Plex Mono',ui-monospace,Menlo,monospace" font-weight="500" font-size="42" letter-spacing="26" fill="#EDEAE4">ADVISORY</text>
+      </svg>
+      <span class="visually-hidden">Durus Advisory</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="lnk" href="#approach">What we offer</a>
+      <a class="lnk" href="#method">How we work</a>
+      <a class="lnk" href="#about">About</a>
+      <a class="lnk" href="#blog">Blog</a>
+      <a class="btn" href="https://calendly.com/durusadvisory" target="_blank" rel="noopener">Book a call <span class="arw" aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow reveal">product · strategy · delivery</span>
+      <h1 class="hero-h reveal">Digital products, shaped and shipped with <span class="em">judgment</span>.</h1>
+      <p class="hero-sub reveal">We help product teams and operators decide what to build, ship it in complex environments, and know whether it worked. Multi-brand, multi-market, compliance-aware.</p>
+      <div class="hero-cta reveal">
+        <a class="btn" href="https://calendly.com/durusadvisory" target="_blank" rel="noopener">Book a call <span class="arw" aria-hidden="true">↗</span></a>
+        <a class="btn ghost" href="#method">See how we work</a>
+      </div>
+    </div>
+
+    <div class="wrap hero-measure reveal">
+      <div class="measure" role="navigation" aria-label="The Durus method">
+        <svg viewBox="0 0 1000 260" preserveAspectRatio="xMidYMid meet">
+          <!-- baseline axis -->
+          <line class="axis" x1="0" y1="230" x2="1000" y2="230"/>
+          <!-- faint vertical guides dropping from each point -->
+          <g class="guides">
+            <line x1="70"  y1="200" x2="70"  y2="230"/>
+            <line x1="280" y1="168" x2="280" y2="230"/>
+            <line x1="500" y1="132" x2="500" y2="230"/>
+            <line x1="720" y1="96"  x2="720" y2="230"/>
+            <line x1="930" y1="58"  x2="930" y2="230"/>
+          </g>
+          <!-- the rising growth line -->
+          <polyline class="growth" points="70,200 280,168 500,132 720,96 930,58"/>
+          <!-- interactive stops: plotted point + button label -->
+          <g class="stops">
+            <a href="#m-direction" aria-label="Direction">
+              <circle class="pt" cx="70" cy="200" r="6"/>
+              <text class="lbl-btn" x="70" y="188" text-anchor="middle">DIRECTION</text>
+              <rect x="10" y="150" width="130" height="90" fill="transparent"/>
+            </a>
+            <a href="#m-understanding" aria-label="Understanding">
+              <circle class="pt" cx="280" cy="168" r="6"/>
+              <text class="lbl-btn" x="280" y="156" text-anchor="middle">UNDERSTANDING</text>
+              <rect x="200" y="118" width="160" height="90" fill="transparent"/>
+            </a>
+            <a href="#m-results" aria-label="Results">
+              <circle class="pt" cx="500" cy="132" r="6"/>
+              <text class="lbl-btn" x="500" y="120" text-anchor="middle">RESULTS</text>
+              <rect x="440" y="82" width="120" height="90" fill="transparent"/>
+            </a>
+            <a href="#m-uplift" aria-label="Uplift">
+              <circle class="pt" cx="720" cy="96" r="6"/>
+              <text class="lbl-btn" x="720" y="84" text-anchor="middle">UPLIFT</text>
+              <rect x="660" y="46" width="120" height="90" fill="transparent"/>
+            </a>
+            <a href="#m-scale" aria-label="Scale">
+              <circle class="pt" cx="930" cy="58" r="6"/>
+              <text class="lbl-btn" x="930" y="46" text-anchor="middle">SCALE</text>
+              <rect x="870" y="8" width="130" height="90" fill="transparent"/>
+            </a>
+          </g>
+          <text class="lbl" x="0" y="252">the method: tap any stage →</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <section id="approach">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Good products die in the gap between strategy and delivery.</h2>
+      </div>
+
+      <div class="offer-intro prose reveal">
+        <p>The roadmap is agreed but nothing ships. Features go out with no clear reason. Teams stay busy without moving the numbers that matter. <em>Strategy and delivery quietly drift apart.</em></p>
+        <p>Durus closes that gap. Here's how we plug in.</p>
+      </div>
+
+      <div class="offer-grid reveal">
+        <article class="offer">
+          <h3>Fractional product leadership</h3>
+          <p>Embedded product ownership for teams that need senior judgment without a permanent hire. We run the roadmap, unblock delivery, and keep engineering, compliance, and commercial pulling the same direction.</p>
+        </article>
+        <article class="offer">
+          <h3>Product &amp; platform audits</h3>
+          <p>A hard look at what you've built. Where the funnel leaks, where brands have drifted out of parity, what's fragile, and what's worth fixing first, delivered as a prioritised plan your team can act on.</p>
+        </article>
+        <article class="offer">
+          <h3>Strategy that reaches execution</h3>
+          <p>Turning goals into a roadmap that actually ships. We shape what to build and why, make the trade-offs, and stay close enough to delivery that the strategy survives contact with reality.</p>
+        </article>
+        <article class="offer">
+          <h3>Measurement you can trust</h3>
+          <p>Making sure the numbers tell the truth. The right things tracked, funnels understood, and decisions grounded in data instead of vanity metrics, so you know whether the work worked.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <section id="method">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>How we work.</h2>
+      </div>
+
+      <div class="acrostic">
+
+        <article id="m-direction" class="acr acr-l reveal">
+          <div class="acr-word"><span class="drop">D</span><span class="rest">irection</span></div>
+          <div class="acr-body">
+            <p class="acr-copy">Turning goals into a roadmap teams can actually deliver. Sharpening what to build and why, prioritising against real constraints, making the trade-offs that keep a product focused instead of bloated.</p>
+            <div class="acr-rule" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article id="m-understanding" class="acr acr-r reveal">
+          <div class="acr-word"><span class="drop">U</span><span class="rest">nderstanding</span></div>
+          <div class="acr-body">
+            <p class="acr-copy">Getting to the bottom of what's actually going on. Listening to teams and stakeholders, mapping how the product really works today, and surfacing the gaps that no one's saying out loud.</p>
+            <div class="acr-rule" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article id="m-results" class="acr acr-l reveal">
+          <div class="acr-word"><span class="drop">R</span><span class="rest">esults</span></div>
+          <div class="acr-body">
+            <p class="acr-copy">Making sure the work moves the numbers that matter. The right things are tracked, funnels are understood, and product decisions rest on data you can actually trust, not vanity metrics.</p>
+            <div class="acr-rule" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article id="m-uplift" class="acr acr-r reveal">
+          <div class="acr-word"><span class="drop">U</span><span class="rest">plift</span></div>
+          <div class="acr-body">
+            <p class="acr-copy">Closing the gaps that quietly cost you. Benchmarking brands or products against each other, fixing what's fragile, and lifting quality across the board so the platform runs cleaner than it did.</p>
+            <div class="acr-rule" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article id="m-scale" class="acr acr-l reveal">
+          <div class="acr-word"><span class="drop">S</span><span class="rest">cale</span></div>
+          <div class="acr-body">
+            <p class="acr-copy">Building the muscle to keep growing. Multi-brand, multi-market delivery without the whole thing coming apart at the seams. Senior product judgment on tap, without adding to headcount.</p>
+            <div class="acr-rule" aria-hidden="true"></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Who's behind it.</h2>
+      </div>
+      <div class="prose reveal about-prose">
+        <p><strong>Durus</strong> means <em>hard, firm, unyielding</em>. It's what we bring to product work that's gone soft: the discipline to make a call, the muscle to see it through, the honesty to know if it worked.</p>
+        <p>We've spent years inside complex, multi-brand platforms in regulated markets. We've owned roadmaps under real pressure, shipped features that had to survive contact with compliance, marketing, engineering, and the CEO all at once. That's the work we do. That's the work we're good at.</p>
+        <p>If you need a deck, hire a consultant. If you need the thing to actually get built, and to know whether it moved the needle, <strong>talk to us</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <section id="blog">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>From the blog.</h2>
+        <p class="blog-intro">Notes on product, delivery, and the space between the plan and the thing that ships.</p>
+      </div>
+      <div class="posts reveal">
+<!-- BLOG:START -->
+        <a class="post-card featured" href="blog/why-good-products-die-between-strategy-and-delivery.html">
+          <div class="pc-media">
+            <img src="assets/covers/gap.svg" alt="" loading="lazy">
+            <div class="pc-title">
+              <span class="pc-meta">29 Sep 2026 · 4 min</span>
+              <h3>Why Good Products Die Between Strategy and Delivery</h3>
+            </div>
+            <div class="pc-desc" aria-hidden="true">
+              <p>Most products don&#x27;t fail because the idea was bad or the team was weak. They fail in the handover between the people who decide and the people who build. Where that gap comes from, and how to close it.</p>
+              <span class="pc-read">Read the post →</span>
+            </div>
+          </div>
+          <p class="pc-touch">Most products don&#x27;t fail because the idea was bad or the team was weak. They fail in the handover between the people who decide and the people who build. Where that gap comes from, and how to close it.</p>
+        </a>
+        <a class="post-card" href="blog/strategy-that-survives-engineering.html">
+          <div class="pc-media">
+            <img src="assets/covers/fracture.svg" alt="" loading="lazy">
+            <div class="pc-title">
+              <span class="pc-meta">15 Sep 2026 · 4 min</span>
+              <h3>Strategy That Can&#x27;t Survive Contact With Engineering Isn&#x27;t Strategy</h3>
+            </div>
+            <div class="pc-desc" aria-hidden="true">
+              <p>A strategy that falls apart the moment engineers look at it was a wish list with a nice cover. How to build strategy that holds up under technical scrutiny, and why engineering belongs in the room early.</p>
+              <span class="pc-read">Read the post →</span>
+            </div>
+          </div>
+          <p class="pc-touch">A strategy that falls apart the moment engineers look at it was a wish list with a nice cover. How to build strategy that holds up under technical scrutiny, and why engineering belongs in the room early.</p>
+        </a>
+        <a class="post-card" href="blog/the-roadmap-nobody-shipped.html">
+          <div class="pc-media">
+            <img src="assets/covers/roadmap.svg" alt="" loading="lazy">
+            <div class="pc-title">
+              <span class="pc-meta">1 Sep 2026 · 4 min</span>
+              <h3>The Roadmap Everyone Agreed To and Nobody Shipped</h3>
+            </div>
+            <div class="pc-desc" aria-hidden="true">
+              <p>Everyone signed off in January. By June, half of it was abandoned and the rest was late. Agreement isn&#x27;t commitment, and most roadmaps fail for reasons that were visible on day one.</p>
+              <span class="pc-read">Read the post →</span>
+            </div>
+          </div>
+          <p class="pc-touch">Everyone signed off in January. By June, half of it was abandoned and the rest was late. Agreement isn&#x27;t commitment, and most roadmaps fail for reasons that were visible on day one.</p>
+        </a>
+        <a class="post-card" href="blog/busy-is-not-moving-the-numbers.html">
+          <div class="pc-media">
+            <img src="assets/covers/busy.svg" alt="" loading="lazy">
+            <div class="pc-title">
+              <span class="pc-meta">18 Aug 2026 · 4 min</span>
+              <h3>Busy Is Not the Same as Moving the Numbers</h3>
+            </div>
+            <div class="pc-desc" aria-hidden="true">
+              <p>Full sprints, packed calendars, a release every week, and the metric that matters hasn&#x27;t moved in months. Why activity is easy to mistake for progress, and how to reconnect the work to outcomes.</p>
+              <span class="pc-read">Read the post →</span>
+            </div>
+          </div>
+          <p class="pc-touch">Full sprints, packed calendars, a release every week, and the metric that matters hasn&#x27;t moved in months. Why activity is easy to mistake for progress, and how to reconnect the work to outcomes.</p>
+        </a>
+        <a class="post-card" href="blog/launching-a-product-beginning-to-end.html">
+          <div class="pc-media">
+            <img src="assets/covers/launch.svg" alt="" loading="lazy">
+            <div class="pc-title">
+              <span class="pc-meta">4 Aug 2026 · 4 min</span>
+              <h3>Launching a Product, Beginning to End</h3>
+            </div>
+            <div class="pc-desc" aria-hidden="true">
+              <p>A launch isn&#x27;t the day you deploy. It starts with a problem worth solving and ends when you know whether it worked. The full sequence, stage by stage, with the checks that matter at each one.</p>
+              <span class="pc-read">Read the post →</span>
+            </div>
+          </div>
+          <p class="pc-touch">A launch isn&#x27;t the day you deploy. It starts with a problem worth solving and ends when you know whether it worked. The full sequence, stage by stage, with the checks that matter at each one.</p>
+        </a>
+        <a class="post-card" href="blog/writing-product-documentation.html">
+          <div class="pc-media">
+            <img src="assets/covers/documents.svg" alt="" loading="lazy">
+            <div class="pc-title">
+              <span class="pc-meta">21 Jul 2026 · 5 min</span>
+              <h3>Writing Product Documentation People Actually Read</h3>
+            </div>
+            <div class="pc-desc" aria-hidden="true">
+              <p>PRDs, one-pagers, user stories, decision logs, release notes. Which documents a product team really needs, what goes in each, and how to keep them alive after the first draft.</p>
+              <span class="pc-read">Read the post →</span>
+            </div>
+          </div>
+          <p class="pc-touch">PRDs, one-pagers, user stories, decision logs, release notes. Which documents a product team really needs, what goes in each, and how to keep them alive after the first draft.</p>
+        </a>
+        <a class="post-card" href="blog/fixing-standups-planning-refinement-retros.html">
+          <div class="pc-media">
+            <img src="assets/covers/calendar.svg" alt="" loading="lazy">
+            <div class="pc-title">
+              <span class="pc-meta">7 Jul 2026 · 5 min</span>
+              <h3>Fixing Your Meetings: Standups, Planning, Refinement and Retros</h3>
+            </div>
+            <div class="pc-desc" aria-hidden="true">
+              <p>Most teams don&#x27;t have too many meetings. They have meetings without a clear output. A practical guide to tightening standups, planning, refinement and retros so they earn their slot.</p>
+              <span class="pc-read">Read the post →</span>
+            </div>
+          </div>
+          <p class="pc-touch">Most teams don&#x27;t have too many meetings. They have meetings without a clear output. A practical guide to tightening standups, planning, refinement and retros so they earn their slot.</p>
+        </a>
+        <a class="post-card" href="blog/scrum-in-a-disorganized-organization.html">
+          <div class="pc-media">
+            <img src="assets/covers/chaos.svg" alt="" loading="lazy">
+            <div class="pc-title">
+              <span class="pc-meta">23 Jun 2026 · 5 min</span>
+              <h3>Bringing Scrum Into a Disorganized Organization: A Case Study</h3>
+            </div>
+            <div class="pc-desc" aria-hidden="true">
+              <p>No backlog, five people setting priorities, and releases that slipped by default. How one product team moved from chaos to a working rhythm in a quarter, and what I&#x27;d do differently.</p>
+              <span class="pc-read">Read the post →</span>
+            </div>
+          </div>
+          <p class="pc-touch">No backlog, five people setting priorities, and releases that slipped by default. How one product team moved from chaos to a working rhythm in a quarter, and what I&#x27;d do differently.</p>
+        </a>
+        <a class="post-card" href="blog/do-you-really-need-scrum.html">
+          <div class="pc-media">
+            <img src="assets/covers/question.svg" alt="" loading="lazy">
+            <div class="pc-title">
+              <span class="pc-meta">9 Jun 2026 · 4 min</span>
+              <h3>Do You Really Need Scrum?</h3>
+            </div>
+            <div class="pc-desc" aria-hidden="true">
+              <p>Scrum is a good answer to a specific problem. Plenty of teams adopt it without having that problem, then wonder why it feels like ceremony. Five questions to ask before you commit.</p>
+              <span class="pc-read">Read the post →</span>
+            </div>
+          </div>
+          <p class="pc-touch">Scrum is a good answer to a specific problem. Plenty of teams adopt it without having that problem, then wonder why it feels like ceremony. Five questions to ask before you commit.</p>
+        </a>
+        <a class="post-card" href="blog/agile-scrum-waterfall-kanban.html">
+          <div class="pc-media">
+            <img src="assets/covers/frameworks.svg" alt="" loading="lazy">
+            <div class="pc-title">
+              <span class="pc-meta">26 May 2026 · 4 min</span>
+              <h3>Agile, Scrum, Waterfall, Kanban: What&#x27;s Actually Different</h3>
+            </div>
+            <div class="pc-desc" aria-hidden="true">
+              <p>People use these words as if they were interchangeable. They aren&#x27;t. A plain-language guide to the main delivery frameworks, what each assumes about your work, and when each one fits.</p>
+              <span class="pc-read">Read the post →</span>
+            </div>
+          </div>
+          <p class="pc-touch">People use these words as if they were interchangeable. They aren&#x27;t. A plain-language guide to the main delivery frameworks, what each assumes about your work, and when each one fits.</p>
+        </a>
+        <a class="post-card" href="blog/why-project-management-matters.html">
+          <div class="pc-media">
+            <img src="assets/covers/gantt.svg" alt="" loading="lazy">
+            <div class="pc-title">
+              <span class="pc-meta">12 May 2026 · 5 min</span>
+              <h3>Why Project Management Still Matters in Software Development</h3>
+            </div>
+            <div class="pc-desc" aria-hidden="true">
+              <p>Agile didn&#x27;t make project management obsolete. It made bad project management easier to hide. What the discipline actually does for a software team, and how to tell when it&#x27;s missing.</p>
+              <span class="pc-read">Read the post →</span>
+            </div>
+          </div>
+          <p class="pc-touch">Agile didn&#x27;t make project management obsolete. It made bad project management easier to hide. What the discipline actually does for a software team, and how to tell when it&#x27;s missing.</p>
+        </a>
+<!-- BLOG:END -->
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="contact">
+    <div class="wrap cta-in reveal">
+      <span class="eyebrow" style="display:block;margin-bottom:22px">Get in touch</span>
+      <h2>Got a product that's drifting, or a roadmap stalled between strategy and delivery?</h2>
+      <p>Send us a note. We'll tell you straight whether we can help.</p>
+      <div class="row">
+        <a class="btn" href="https://calendly.com/durusadvisory" target="_blank" rel="noopener">Book a call <span class="arw" aria-hidden="true">↗</span></a>
+        <a class="btn ghost email" href="mailto:durus@durusadvisory.com">durus@durusadvisory.com</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>© <span id="yr"></span> Durus Advisory</span>
+    <div class="foot-links">
+      <a href="#approach">What we offer</a>
+      <a href="#method">How we work</a>
+      <a href="#about">About</a>
+      <a href="#blog">Blog</a>
+      <a href="mailto:durus@durusadvisory.com">Email</a>
+      <a href="https://linkedin.com/company/durus-advisory" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://calendly.com/durusadvisory" target="_blank" rel="noopener">Book a call</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/logo.js"></script>
+<script>
+  /* Logo: intro overlay that hands off into the header badge. */
+  (function(){
+    var root = document.documentElement;
+    var brand = document.getElementById('brandLogo');
+    var header = DurusLogo.header(brand, { autoplay: false });
+    if(!root.classList.contains('intro-on')) return;
+
+    var intro = document.getElementById('intro');
+    var svg = document.getElementById('introLogo');
+    var logo = new DurusLogo(svg);
+    logo.seek(0);
+    var done = false;
+
+    function markSeen(){ try{ sessionStorage.setItem('durusIntroSeen','1'); }catch(e){} }
+
+    function handOff(){
+      if(done) return; done = true;
+      logo.finish();
+      var from = svg.getBoundingClientRect();
+      var to = brand.getBoundingClientRect();
+      var s = to.width / from.width;
+      intro.classList.add('leaving');
+      svg.style.transition = 'transform .9s cubic-bezier(.65,0,.25,1)';
+      svg.style.transform = 'translate(' + (to.left - from.left) + 'px,' + (to.top - from.top) + 'px) scale(' + s + ')';
+      setTimeout(function(){
+        root.classList.remove('intro-on');
+        if(intro.parentNode) intro.parentNode.removeChild(intro);
+        header.finish();
+        markSeen();
+      }, 950);
+    }
+
+    function skip(){
+      if(done) return;
+      done = true;
+      markSeen();
+      intro.classList.add('leaving');
+      intro.style.transition = 'opacity .35s ease';
+      intro.style.opacity = '0';
+      setTimeout(function(){
+        root.classList.remove('intro-on');
+        if(intro.parentNode) intro.parentNode.removeChild(intro);
+        header.finish();
+      }, 360);
+    }
+
+    document.getElementById('introSkip').addEventListener('click', skip);
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') skip(); });
+
+    DurusLogo.fontsReady(1500).then(function(){
+      if(done) return;
+      logo.build();
+      logo.play({ onDone: function(){ setTimeout(handOff, 450); } });
+    });
+  })();
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){
+      els.forEach(function(el){el.classList.add('in')});
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el,i){
+      if(i < 5){ el.style.transitionDelay = (i*70)+'ms'; }
+      io.observe(el);
+    });
+  })();
+</script>
+</body>
+</html>

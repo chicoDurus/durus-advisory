@@ -21,3 +21,7 @@ site/                what gets published (don't edit generated .html by hand)
 Copy a file in `src/posts/`, edit the front matter (`title`, `slug`, `date`, `cover`, `excerpt`) and the text, build, push.
 Covers available: question, chaos, calendar, orgchart, launch, documents, brands, busy, roadmap, fracture, gap.
 New cover art: add a function to `src/covers.py`, then `python3 src/covers.py site/assets/covers`.
+
+## Share images for posts
+Each post gets its own LinkedIn/social preview image. After adding or renaming a post:
+`python3 src/og.py && python3 src/build.py` (needs `pip install playwright` and `playwright install chromium`).
